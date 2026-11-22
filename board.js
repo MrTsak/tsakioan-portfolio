@@ -40,14 +40,6 @@
     printLink.hidden = selected !== 'hardware';
     printLink.textContent = document.documentElement.lang === 'el' ? 'Πραγματική δοκιμή; Άνοιξε τη σελίδα εκτύπωσης →' : 'Try your own printer: open the test sheet →';
     printLink.href = 'print-test.html?lang=' + document.documentElement.lang;
-    const helpLink = demo.querySelector('.demo-help-link');
-    helpLink.hidden = selected !== 'hardware';
-    helpLink.textContent = document.documentElement.lang === 'el' ? 'Βοήθεια με τον εκτυπωτή; Ξεκίνα τους ελέγχους →' : 'Printer trouble? Start the guided checks →';
-    helpLink.href = 'printer-help.html?lang=' + document.documentElement.lang;
-    const reportLink = demo.querySelector('.demo-report-link');
-    reportLink.hidden = selected !== 'hardware';
-    reportLink.textContent = document.documentElement.lang === 'el' ? 'Κατάγραψε την εργασία: δημιουργία δελτίου PDF →' : 'Record the work: build a service report PDF →';
-    reportLink.href = 'service-report.html?lang=' + document.documentElement.lang;
     let networkLink = demo.querySelector('.demo-network-link');
     if (!networkLink) { networkLink = document.createElement('a'); networkLink.className = 'demo-print-link demo-network-link'; demo.append(networkLink); }
     networkLink.hidden = selected !== 'network';
