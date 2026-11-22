@@ -40,6 +40,10 @@
     printLink.hidden = selected !== 'hardware';
     printLink.textContent = document.documentElement.lang === 'el' ? 'Πραγματική δοκιμή; Άνοιξε τη σελίδα εκτύπωσης →' : 'Try your own printer: open the test sheet →';
     printLink.href = 'print-test.html?lang=' + document.documentElement.lang;
+    const helpLink = demo.querySelector('.demo-help-link');
+    helpLink.hidden = selected !== 'hardware';
+    helpLink.textContent = document.documentElement.lang === 'el' ? 'Βοήθεια με τον εκτυπωτή; Ξεκίνα τους ελέγχους →' : 'Printer trouble? Start the guided checks →';
+    helpLink.href = 'printer-help.html?lang=' + document.documentElement.lang;
     demo.dataset.kind = selected;
     demo.dataset.step = String(step);
     demo.querySelector('.demo-label').textContent = t('label');
