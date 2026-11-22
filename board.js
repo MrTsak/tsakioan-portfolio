@@ -48,6 +48,11 @@
     reportLink.hidden = selected !== 'hardware';
     reportLink.textContent = document.documentElement.lang === 'el' ? 'Κατάγραψε την εργασία: δημιουργία δελτίου PDF →' : 'Record the work: build a service report PDF →';
     reportLink.href = 'service-report.html?lang=' + document.documentElement.lang;
+    let networkLink = demo.querySelector('.demo-network-link');
+    if (!networkLink) { networkLink = document.createElement('a'); networkLink.className = 'demo-print-link demo-network-link'; demo.append(networkLink); }
+    networkLink.hidden = selected !== 'network';
+    networkLink.textContent = document.documentElement.lang === 'el' ? 'Υπολογιστής IP και υποδικτύου' : 'IP and network calculator';
+    networkLink.href = 'network.html?lang=' + document.documentElement.lang;
     demo.dataset.kind = selected;
     demo.dataset.step = String(step);
     demo.querySelector('.demo-label').textContent = t('label');
