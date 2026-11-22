@@ -16,7 +16,7 @@
     networkReady: ['Follow a connection from cable to gateway.', 'Ακολούθησε τη σύνδεση από το καλώδιο μέχρι την πύλη.'],
     hardwareReady: ['Watch a test page move through the printer.', 'Δες μια δοκιμαστική σελίδα να περνά από τον εκτυπωτή.'],
     networkRun: ['Run network check', 'Έλεγχος δικτύου'],
-    hardwareRun: ['Print test page', 'Δοκιμαστική εκτύπωση'],
+    hardwareRun: ['Run print demo', 'Προσομοίωση εκτύπωσης'],
     running: ['Running…', 'Σε εξέλιξη…'],
     again: ['Run again', 'Επανάληψη'],
     network0: ['01 · Checking the physical link…', '01 · Έλεγχος φυσικής σύνδεσης…'],
@@ -36,6 +36,10 @@
     demo.hidden = !available;
     board.dataset.activity = available && step >= 0 && step < 2 ? selected : '';
     if (!available) return;
+    const printLink = demo.querySelector('.demo-print-link');
+    printLink.hidden = selected !== 'hardware';
+    printLink.textContent = document.documentElement.lang === 'el' ? 'Πραγματική δοκιμή; Άνοιξε τη σελίδα εκτύπωσης →' : 'Try your own printer: open the test sheet →';
+    printLink.href = 'print-test.html?lang=' + document.documentElement.lang;
     demo.dataset.kind = selected;
     demo.dataset.step = String(step);
     demo.querySelector('.demo-label').textContent = t('label');
