@@ -44,6 +44,10 @@
     helpLink.hidden = selected !== 'hardware';
     helpLink.textContent = document.documentElement.lang === 'el' ? 'Βοήθεια με τον εκτυπωτή; Ξεκίνα τους ελέγχους →' : 'Printer trouble? Start the guided checks →';
     helpLink.href = 'printer-help.html?lang=' + document.documentElement.lang;
+    const reportLink = demo.querySelector('.demo-report-link');
+    reportLink.hidden = selected !== 'hardware';
+    reportLink.textContent = document.documentElement.lang === 'el' ? 'Κατάγραψε την εργασία: δημιουργία δελτίου PDF →' : 'Record the work: build a service report PDF →';
+    reportLink.href = 'service-report.html?lang=' + document.documentElement.lang;
     demo.dataset.kind = selected;
     demo.dataset.step = String(step);
     demo.querySelector('.demo-label').textContent = t('label');
