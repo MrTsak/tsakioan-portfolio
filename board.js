@@ -11,19 +11,19 @@
   const demo = document.querySelector('.pcb-demo');
   const run = demo.querySelector('.demo-run');
   const copy = {
-    label: ['INTERACTIVE DEMO', 'ΔΙΑΔΡΑΣΤΙΚΟ DEMO'],
+    label: ['INTERACTIVE DEMO', 'ΔΟΚΙΜΑΣΕ ΤΗΝ ΠΡΟΣΟΜΟΙΩΣΗ'],
     note: ['Simulation only — no access to your devices or network.', 'Προσομοίωση — χωρίς πρόσβαση στις συσκευές ή στο δίκτυό σου.'],
-    networkReady: ['Follow a connection from cable to gateway.', 'Ακολούθησε τη σύνδεση από το καλώδιο μέχρι την πύλη.'],
+    networkReady: ['Follow a connection from cable to gateway.', 'Δες πώς γίνεται μια σύνδεση δικτύου, από το καλώδιο μέχρι το gateway.'],
     hardwareReady: ['Watch a test page move through the printer.', 'Δες μια δοκιμαστική σελίδα να περνά από τον εκτυπωτή.'],
     networkRun: ['Run network check', 'Έλεγχος δικτύου'],
     hardwareRun: ['Run print demo', 'Προσομοίωση εκτύπωσης'],
     running: ['Running…', 'Σε εξέλιξη…'],
     again: ['Run again', 'Επανάληψη'],
-    network0: ['01 · Checking the physical link…', '01 · Έλεγχος φυσικής σύνδεσης…'],
-    network1: ['02 · Link established. Assigning an IP address…', '02 · Η σύνδεση έγινε. Εκχώρηση διεύθυνσης IP…'],
-    network2: ['03 · Gateway reachable. Connection ready.', '03 · Η πύλη αποκρίνεται. Η σύνδεση είναι έτοιμη.'],
+    network0: ['01 · Checking the physical link…', '01 · Έλεγχος σύνδεσης του καλωδίου…'],
+    network1: ['02 · Link established. Assigning an IP address…', '02 · Το καλώδιο συνδέθηκε. Αντιστοίχιση διεύθυνσης IP…'],
+    network2: ['03 · Gateway reachable. Connection ready.', '03 · Το gateway απαντά. Η σύνδεση λειτουργεί.'],
     hardware0: ['01 · Sending the job to the print queue…', '01 · Αποστολή στην ουρά εκτύπωσης…'],
-    hardware1: ['02 · Feeding paper. Printing the test pattern…', '02 · Τροφοδοσία χαρτιού. Εκτύπωση δοκιμαστικού μοτίβου…'],
+    hardware1: ['02 · Feeding paper. Printing the test pattern…', '02 · Το χαρτί περνά στον εκτυπωτή. Εκτύπωση δοκιμαστικής σελίδας…'],
     hardware2: ['03 · Test page complete. Ready for inspection.', '03 · Η σελίδα εκτυπώθηκε. Έτοιμη για έλεγχο.']
   };
   const t = key => copy[key][document.documentElement.lang === 'el' ? 1 : 0];
@@ -38,12 +38,12 @@
     if (!available) return;
     const printLink = demo.querySelector('.demo-print-link');
     printLink.hidden = selected !== 'hardware';
-    printLink.textContent = document.documentElement.lang === 'el' ? 'Πραγματική δοκιμή; Άνοιξε τη σελίδα εκτύπωσης →' : 'Try your own printer: open the test sheet →';
+    printLink.textContent = document.documentElement.lang === 'el' ? 'Κατέβασε μια δοκιμαστική σελίδα για τον εκτυπωτή σου →' : 'Try your own printer: open the test sheet →';
     printLink.href = 'print-test.html?lang=' + document.documentElement.lang;
     let networkLink = demo.querySelector('.demo-network-link');
     if (!networkLink) { networkLink = document.createElement('a'); networkLink.className = 'demo-print-link demo-network-link'; demo.append(networkLink); }
     networkLink.hidden = selected !== 'network';
-    networkLink.textContent = document.documentElement.lang === 'el' ? 'Υπολογιστής IP και υποδικτύου' : 'IP and network calculator';
+    networkLink.textContent = document.documentElement.lang === 'el' ? 'Υπολογισμός IP και υποδικτύου' : 'IP and network calculator';
     networkLink.href = 'network.html?lang=' + document.documentElement.lang;
     demo.dataset.kind = selected;
     demo.dataset.step = String(step);
