@@ -12,3 +12,5 @@
   .art-label{padding-left:0}
   .art-bottom{gap:12px;flex-wrap:wrap}
 }
+
+@media(min-width:721px){.art-label,.art-bottom{font-size:.875rem;letter-spacing:.4px;line-height:1.6;color:#d1dff2}.art-bottom{gap:12px;flex-wrap:wrap}}
