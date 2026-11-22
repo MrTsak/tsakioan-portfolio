@@ -42,7 +42,7 @@
     'Let’s connect about IT support, networking, or an opportunity to work together.': 'Ας συζητήσουμε για τεχνική υποστήριξη, δίκτυα ή μια ευκαιρία συνεργασίας.',
     'Send me an email or find me on LinkedIn.': 'Στείλε μου email ή βρες με στο LinkedIn.',
     'Email me': 'Στείλε email', 'Connect on LinkedIn': 'Επικοινωνία στο LinkedIn',
-    '(opens in a new tab)': '(ανοίγει σε νέα καρτέλα)', 'Ioannis Tsakalidis': 'Ιωάννης Τσακαλίδης', 'Back to top': 'Επιστροφή στην αρχή',
+    '(opens in a new tab)': '(ανοίγει σε νέα καρτέλα)', 'Ioannis Tsakalidis': 'Ιωάννης Τσακαλίδης', 'Back to top': 'Επιστροφή στην αρχή', 'Privacy policy': 'Πολιτική απορρήτου (EN)',
     'Tsakioan home': 'Tsakioan — Αρχική', 'Main navigation': 'Κύρια πλοήγηση',
     'Interactive circuit board': 'Διαδραστική πλακέτα', 'Circuit board power': 'Τροφοδοσία πλακέτας',
     'Networking skills': 'Δεξιότητες δικτύων', 'Technical support skills': 'Δεξιότητες τεχνικής υποστήριξης'
