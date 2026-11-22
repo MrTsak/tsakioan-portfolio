@@ -21,3 +21,5 @@
 
 /* Current employment details */
 .role-duties{padding-left:1.2rem;margin:0 0 24px;color:var(--muted);line-height:1.8}.role-duties li+li{margin-top:12px}.experience-title>p{font-size:1rem;line-height:1.8;color:var(--muted);margin:20px 0 0}.experience-title>p strong{color:var(--ink)}
+
+.experience .role-duties,.experience .experience-title>p{color:#4f6174}.experience .experience-title>p strong{color:#101a2b}
