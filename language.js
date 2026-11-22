@@ -1,5 +1,22 @@
 (() => {
   const greek = {
+    "CONTRACT ROLE": "ΣΥΜΒΑΣΗ ΕΡΓΑΣΙΑΣ",
+    "IT Specialist": "Ειδικός Πληροφορικής",
+    "Larissa, Greece · April–July 2025": "Λάρισα, Ελλάδα · Απρίλιος–Ιούλιος 2025",
+    "Provided onsite and remote support for computers, printers and networks, including troubleshooting, maintenance and software setup.": "Επιτόπια και απομακρυσμένη υποστήριξη υπολογιστών, εκτυπωτών και δικτύων, με διάγνωση βλαβών, συντήρηση και εγκατάσταση λογισμικού.",
+    "Installed and terminated UTP and RJ-45 network cabling and configured small-office systems.": "Εγκατάσταση καλωδίωσης UTP, τερματισμοί RJ-45 και ρύθμιση συστημάτων μικρών γραφείων.",
+    "Assisted with equipment preparation and installation for public-sector projects, including Syzefxis II.": "Συμμετοχή στην προετοιμασία και εγκατάσταση εξοπλισμού για έργα του δημόσιου τομέα, μεταξύ αυτών το ΣΥΖΕΥΞΙΣ II.",
+    "IT support": "Υποστήριξη πληροφορικής",
+    "Syzefxis II": "ΣΥΖΕΥΞΙΣ II",
+    "INTERNSHIP": "ΠΡΑΚΤΙΚΗ ΑΣΚΗΣΗ",
+    "Computer Technical Specialist": "Τεχνικός Υπολογιστών",
+    "Region of Thessaly": "Περιφέρεια Θεσσαλίας",
+    "Larissa, Greece · November 2022–August 2023": "Λάρισα, Ελλάδα · Νοέμβριος 2022–Αύγουστος 2023",
+    "Supported daily IT operations across departments and helped employees resolve computer and software issues.": "Υποστήριξη της καθημερινής λειτουργίας πληροφορικής σε διαφορετικά τμήματα και βοήθεια στους υπαλλήλους για προβλήματα υπολογιστών και λογισμικού.",
+    "Created reports and proposed improvements to local network and hardware infrastructure.": "Σύνταξη αναφορών και προτάσεων βελτίωσης για το τοπικό δίκτυο και τον εξοπλισμό.",
+    "User support": "Υποστήριξη χρηστών",
+    "Hardware & networks": "Υλικό & δίκτυα",
+
     "Install, maintain and repair Xerox and Lexmark printers and multifunction devices onsite, in the workshop and remotely.": "Εγκατάσταση, συντήρηση και επισκευή εκτυπωτών και πολυμηχανημάτων Xerox και Lexmark στον χώρο του πελάτη, στο εργαστήριο και απομακρυσμένα.",
     "Diagnose faults, repair or replace components, then reassemble, configure and test equipment.": "Διάγνωση βλαβών, επισκευή ή αντικατάσταση εξαρτημάτων, επανασυναρμολόγηση, ρύθμιση και δοκιμή εξοπλισμού.",
     "Install drivers, operating systems and applications, and follow up on repairs to check reliability.": "Εγκατάσταση οδηγών, λειτουργικών συστημάτων και εφαρμογών, καθώς και παρακολούθηση της αξιοπιστίας των επισκευών.",
