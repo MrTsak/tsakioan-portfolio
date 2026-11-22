@@ -29,7 +29,7 @@
   let lang=new URLSearchParams(location.search).get('lang')==='el'?'el':'en', selected=null, step=0, outcome=null;
   const $=id=>document.getElementById(id);
   function render(focus=false){
-    const t=ui[lang]; document.documentElement.lang=lang; document.title=(lang==='el'?'Βοήθεια εκτυπωτή':'Printer troubleshooting')+' · Tsakioan';
+    const t=ui[lang]; $('report-link').textContent=lang==='el'?'Δημιουργία δελτίου εργασίας':'Build a service report'; $('report-link').href='service-report.html?lang='+lang; document.documentElement.lang=lang; document.title=(lang==='el'?'Βοήθεια εκτυπωτή':'Printer troubleshooting')+' · Tsakioan';
     const labels={back:'back',title:'title',intro:'intro',scope:'scope','choose-title':'choose',solved:'solved',next:'next',previous:'previous',restart:'restart',another:'another','test-link':'test','footer-note':'footer','ms-source':'ms','xerox-source':'xerox','sheet-footer':'sheet'};
     Object.entries(labels).forEach(([id,key])=>$(id).textContent=t[key]);
     $('language').textContent=lang==='en'?'Ελληνικά':'English'; $('language').setAttribute('aria-label',lang==='en'?'Αλλαγή σε Ελληνικά':'Switch to English');
