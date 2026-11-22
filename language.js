@@ -22,7 +22,7 @@
     'Artificial Intelligence student.': 'Φοιτητής Τεχνητής Νοημοσύνης.',
     'I like understanding how things work—and making them work better.': 'Μου αρέσει να καταλαβαίνω πώς λειτουργούν τα πράγματα και να τα κάνω να λειτουργούν καλύτερα.',
     'Explore my background': 'Γνώρισε την εμπειρία μου', 'THE HANDS-ON SIDE': 'Η ΠΡΑΚΤΙΚΗ ΠΛΕΥΡΑ',
-    'Power': 'Ρεύμα', 'on': 'ON', 'off': 'OFF', 'Networks': 'Δίκτυα', 'Hardware': 'Υλικό', 'AI & learning': 'AI & μάθηση',
+    'Power': 'Ρεύμα', 'on': 'ON', 'off': 'OFF', 'Printers': 'Εκτυπωτές', 'Networks': 'Δίκτυα', 'Hardware': 'Υλικό', 'AI & learning': 'AI & μάθηση',
     'Built on curiosity.': 'Αφετηρία η περιέργεια.',
     'Tap a component to explore my work. Try the power switch to see the board come to life.': 'Πάτησε ένα εξάρτημα για να γνωρίσεις τη δουλειά μου. Δοκίμασε τον διακόπτη για να δεις την πλακέτα να ζωντανεύει.',
     'Networks that connect.': 'Δίκτυα που συνδέουν.',
