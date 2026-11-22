@@ -1,5 +1,19 @@
 (() => {
   const greek = {
+    "Install, maintain and repair Xerox and Lexmark printers and multifunction devices onsite, in the workshop and remotely.": "Εγκατάσταση, συντήρηση και επισκευή εκτυπωτών και πολυμηχανημάτων Xerox και Lexmark στον χώρο του πελάτη, στο εργαστήριο και απομακρυσμένα.",
+    "Diagnose faults, repair or replace components, then reassemble, configure and test equipment.": "Διάγνωση βλαβών, επισκευή ή αντικατάσταση εξαρτημάτων, επανασυναρμολόγηση, ρύθμιση και δοκιμή εξοπλισμού.",
+    "Install drivers, operating systems and applications, and follow up on repairs to check reliability.": "Εγκατάσταση οδηγών, λειτουργικών συστημάτων και εφαρμογών, καθώς και παρακολούθηση της αξιοπιστίας των επισκευών.",
+    "I’m Ioannis Tsakalidis, a computer and network technician based in Larissa. My experience spans IT support, networking, and servicing Xerox and Lexmark printing equipment. Alongside my work, I’m studying Artificial Intelligence.": "Είμαι ο Ιωάννης Τσακαλίδης, τεχνικός υπολογιστών και δικτύων με έδρα τη Λάρισα. Η εμπειρία μου καλύπτει την τεχνική υποστήριξη, τα δίκτυα και τη συντήρηση και επισκευή εκτυπωτικού εξοπλισμού Xerox και Lexmark. Παράλληλα με τη δουλειά μου, σπουδάζω Τεχνητή Νοημοσύνη.",
+    "From diagnosis": "Από τη διάγνωση",
+    "to repair.": "στην επισκευή.",
+    "CURRENT ROLE": "ΤΡΕΧΟΥΣΑ ΘΕΣΗ",
+    "Peripheral Devices": "Τεχνικός",
+    "Technician": "Περιφερειακών Συσκευών",
+    "Larissa, Greece · July 2025–Present": "Λάρισα, Ελλάδα · Ιούλιος 2025–Σήμερα",
+    "Technical training and certifications in the repair of printing and document-management equipment.": "Τεχνική εκπαίδευση και πιστοποιήσεις στην επισκευή εκτυπωτικού εξοπλισμού και συσκευών διαχείρισης εγγράφων.",
+    "Diagnostics & repair": "Διάγνωση & επισκευή",
+    "Onsite & remote support": "Επιτόπια & απομακρυσμένη υποστήριξη",
+
     'Skip to content': 'Μετάβαση στο περιεχόμενο',
     'About': 'Σχετικά', 'Experience': 'Εμπειρία', 'Let’s connect': 'Επικοινωνία',
     'IOANNIS TSAKALIDIS': 'ΙΩΑΝΝΗΣ ΤΣΑΚΑΛΙΔΗΣ', 'LARISSA, GREECE': 'ΛΑΡΙΣΑ, ΕΛΛΑΔΑ',
