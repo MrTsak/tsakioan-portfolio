@@ -12,7 +12,7 @@
   function render() {
     const on = power.getAttribute('aria-checked') === 'true';
     board.dataset.powered = String(on);
-    power.querySelector('.power-state').textContent = on ? 'on' : 'off';
+    power.querySelector('.power-state').textContent = window.siteLanguage.t(on ? 'on' : 'off');
     parts.forEach(part => {
       part.disabled = !on;
       part.setAttribute('aria-pressed', String(on && part.dataset.part === selected));
@@ -20,13 +20,14 @@
     const [title, description] = !on
       ? ['Power is off.', 'Flip the power switch to light the traces and explore the components.']
       : selected ? content[selected] : ['Built on curiosity.', 'Tap a component to explore my work. Try the power switch to see the board come to life.'];
-    detail.querySelector('h2').textContent = title;
-    detail.querySelector('p').textContent = description;
+    detail.querySelector('h2').textContent = window.siteLanguage.t(title);
+    detail.querySelector('p').textContent = window.siteLanguage.t(description);
   }
   power.addEventListener('click', () => {
     power.setAttribute('aria-checked', String(power.getAttribute('aria-checked') !== 'true'));
     render();
   });
   parts.forEach(part => part.addEventListener('click', () => { selected = part.dataset.part; render(); }));
+  document.addEventListener('languagechange', render);
   render();
 })();
