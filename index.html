@@ -10,6 +10,16 @@
     <meta name="theme-color" content="#101a2b" />
     <title>Ioannis Tsakalidis · IT & Artificial Intelligence</title>
     <link rel="canonical" href="https://tsakioan.com/" />
+    <link rel="alternate" hreflang="en" href="https://tsakioan.com/" />
+    <link rel="alternate" hreflang="el" href="https://tsakioan.com/el/" />
+    <link rel="alternate" hreflang="x-default" href="https://tsakioan.com/" />
+    <script id="language-redirect">
+      // Visitors who chose Greek before go straight to the Greek page.
+      try {
+        if (localStorage.getItem("tsakioan-language") === "el")
+          location.replace("el/" + location.search + location.hash);
+      } catch {}
+    </script>
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Tsakioan" />
     <meta property="og:title" content="Ioannis Tsakalidis · IT &amp; Artificial Intelligence" />
@@ -28,8 +38,8 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:locale:alternate" content="el_GR" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="icon" href="favicon.svg?v=20261123" type="image/svg+xml" />
-    <link rel="stylesheet" href="style.css?v=20261123" />
+    <link rel="icon" href="favicon.svg?v=20261123b" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css?v=20261123b" />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -41,9 +51,9 @@
         <a href="#about">About</a><a href="#experience">Experience</a
         ><a href="#contact">Let’s connect <span class="link-dot" aria-hidden="true"></span></a>
       </nav>
-      <button class="language-toggle" type="button" aria-label="Switch to Greek" hidden>
-        Ελληνικά
-      </button>
+      <a class="language-toggle" href="el/" hreflang="el" lang="el" aria-label="Αλλαγή σε Ελληνικά"
+        >Ελληνικά</a
+      >
     </header>
     <main id="main">
       <section class="hero wrap" aria-labelledby="hero-title">
@@ -412,7 +422,7 @@
       ><span>Ioannis Tsakalidis</span><a href="privacy.html">Privacy policy</a
       ><a href="#main">Back to top</a>
     </footer>
-    <script src="language.js?v=20261123" defer></script>
-    <script src="board.js?v=20261123" defer></script>
+    <script src="language.js?v=20261123b" defer></script>
+    <script src="board.js?v=20261123b" defer></script>
   </body>
 </html>
