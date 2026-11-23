@@ -62,8 +62,8 @@
     "Technical Services": "Εκπρόσωπος",
     Representative: "Τεχνικών Υπηρεσιών",
     "Larissa, Greece · July 2025–Present": "Λάρισα, Ελλάδα · Ιούλιος 2025–Σήμερα",
-    "Technical training and certifications in the repair of printing and document-management equipment.":
-      "Έχω παρακολουθήσει τεχνικές εκπαιδεύσεις και έχω λάβει πιστοποιήσεις για την επισκευή εκτυπωτών, πολυμηχανημάτων και εξοπλισμού διαχείρισης εγγράφων.",
+    "Completed official service training from Xerox and Lexmark, covering multiple printer and multifunction models.":
+      "Έχω ολοκληρώσει επίσημη εκπαίδευση service από τη Xerox και τη Lexmark, για πολλά μοντέλα εκτυπωτών και πολυμηχανημάτων.",
     "Diagnostics & repair": "Διάγνωση & επισκευή",
     "Onsite & remote support": "Επιτόπια & απομακρυσμένη υποστήριξη",
     "Skip to content": "Μετάβαση στο περιεχόμενο",
@@ -95,8 +95,8 @@
     "Structured cabling, system setup, troubleshooting, and fault restoration—including work on Syzefxis II.":
       "Δομημένη καλωδίωση, εγκατάσταση συστημάτων, διάγνωση και αποκατάσταση βλαβών, με συμμετοχή και στο έργο ΣΥΖΕΥΞΙΣ II.",
     "Hands-on with hardware.": "Υπολογιστές και εκτυπωτές.",
-    "Computer support, hardware maintenance, and printer repair, backed by my Xerox printer certification.":
-      "Ασχολούμαι με την υποστήριξη υπολογιστών, τη συντήρηση εξοπλισμού και την επισκευή εκτυπωτών. Έχω πιστοποίηση για εκτυπωτές Xerox.",
+    "Computer support, hardware maintenance, and printer repair, backed by official Xerox and Lexmark service training.":
+      "Ασχολούμαι με την υποστήριξη υπολογιστών, τη συντήρηση εξοπλισμού και την επισκευή εκτυπωτών, με επίσημη εκπαίδευση service από τη Xerox και τη Lexmark.",
     "Still learning. Always curious.": "Συνεχίζω να μαθαίνω.",
     "I’m studying Artificial Intelligence at Aegean College and exploring how programming and automation can support everyday IT work.":
       "Σπουδάζω Τεχνητή Νοημοσύνη στο Aegean College. Με ενδιαφέρει πώς ο προγραμματισμός και οι αυτοματισμοί μπορούν να με βοηθήσουν στην καθημερινή δουλειά μου.",
@@ -132,8 +132,6 @@
     "TECHNICAL SUPPORT": "ΤΕΧΝΙΚΗ ΥΠΟΣΤΗΡΙΞΗ",
     "Understanding the fault.": "Εντοπισμός βλάβης.",
     "Finding the fix.": "Επισκευή και έλεγχος.",
-    "My technical background covers computer support, hardware maintenance, and printer repair. As a Xerox-certified printer specialist, I bring practical equipment knowledge to diagnosis and support.":
-      "Έχω εμπειρία στην υποστήριξη υπολογιστών, τη συντήρηση εξοπλισμού και την επισκευή εκτυπωτών, καθώς και πιστοποίηση για εκτυπωτές Xerox.",
     "Computer hardware": "Εξοπλισμός υπολογιστών",
     "Printer repair": "Επισκευή εκτυπωτών",
     "Client communication": "Επικοινωνία με πελάτες",
