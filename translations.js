@@ -112,8 +112,8 @@
     "practical experience.": "πώς λύνεται ένα πρόβλημα.",
     "I’m Ioannis, a computer and network technician based in Larissa, Greece. My background is hands-on: technical support, hardware maintenance, printer repair, and getting networks up and running.":
       "Στη δουλειά μου ασχολούμαι με υπολογιστές, εκτυπωτές και δίκτυα: από την εγκατάσταση και τη συντήρηση μέχρι τον εντοπισμό και την επισκευή μιας βλάβης.",
-    "I’m also pursuing a BSc in Artificial Intelligence at Aegean College, developing my understanding of programming, automation, and intelligent systems. I want to bring those two worlds together: real technical problems and thoughtful ways to solve them.":
-      "Στο Aegean College σπουδάζω Τεχνητή Νοημοσύνη και μαθαίνω περισσότερα για τον προγραμματισμό και τους αυτοματισμούς. Θέλω να αξιοποιήσω αυτές τις γνώσεις σε προβλήματα που συναντώ στη δουλειά μου.",
+    "I’m also pursuing a BSc (Hons) in Computing (Artificial Intelligence) from the University of Essex, delivered at Aegean College, developing my understanding of programming, automation, and intelligent systems. I want to bring those two worlds together: real technical problems and thoughtful ways to solve them.":
+      "Σπουδάζω BSc (Hons) Computing (Τεχνητή Νοημοσύνη) από το University of Essex, το οποίο υλοποιείται στο Aegean College, και μαθαίνω περισσότερα για τον προγραμματισμό και τους αυτοματισμούς. Θέλω να αξιοποιήσω αυτές τις γνώσεις σε προβλήματα που συναντώ στη δουλειά μου.",
     "For me, good technical work also means communicating clearly with the people who depend on it.":
       "Θεωρώ σημαντικό να εξηγώ με απλά λόγια ποιο είναι το πρόβλημα, τι χρειάζεται να γίνει και πώς μπορεί να αποφευχθεί στο μέλλον.",
     "WHERE I’VE PUT IT INTO PRACTICE": "ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΕΜΠΕΙΡΙΑ",
@@ -141,8 +141,10 @@
     "smarter.": "Νοημοσύνη.",
     "I’m studying Artificial Intelligence at Aegean College, with a growing interest in how programming and automation can make everyday IT work more efficient.":
       "Σπουδάζω Τεχνητή Νοημοσύνη στο Aegean College. Με ενδιαφέρει ιδιαίτερα πώς ο προγραμματισμός και οι αυτοματισμοί μπορούν να διευκολύνουν την καθημερινή τεχνική υποστήριξη.",
-    "BSc Artificial Intelligence": "BSc Τεχνητή Νοημοσύνη",
-    "Aegean College · In progress": "Aegean College · Σε εξέλιξη",
+    "BSc (Hons) Computing (AI)": "BSc (Hons) Computing (Τεχνητή Νοημοσύνη)",
+    "University of Essex · Aegean College · In progress":
+      "University of Essex · Aegean College · Σε εξέλιξη",
+    "Download CV (PDF)": "Κατέβασε το βιογραφικό (PDF)",
     "KEEP THE CONVERSATION GOING": "ΑΣ ΜΙΛΗΣΟΥΜΕ",
     "Let’s talk": "Θέλεις να",
     "technology.": "μιλήσουμε;",
