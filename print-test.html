@@ -27,7 +27,7 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:locale:alternate" content="el_GR" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="icon" href="favicon.svg?v=20261123" type="image/svg+xml" />
+    <link rel="icon" href="favicon.svg?v=20261123b" type="image/svg+xml" />
     <style>
       * {
         box-sizing: border-box;
@@ -277,7 +277,7 @@
   </head>
   <body>
     <div class="controls">
-      <a href="./#main" data-en="← Back to portfolio" data-el="← Επιστροφή στο portfolio"
+      <a id="back" href="./#main" data-en="← Back to portfolio" data-el="← Επιστροφή στο portfolio"
         >← Back to portfolio</a
       >
       <h2
@@ -490,6 +490,7 @@
         const toggle = document.getElementById("language");
         function apply() {
           document.documentElement.lang = lang;
+          document.getElementById("back").href = lang === "el" ? "el/#main" : "./#main";
           document
             .querySelectorAll("[data-en]")
             .forEach((el) => (el.textContent = el.dataset[lang]));

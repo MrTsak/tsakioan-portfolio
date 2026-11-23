@@ -4,15 +4,27 @@ Personal portfolio for Ioannis Tsakalidis. Plain HTML and CSS; no build step, pa
 
 ## Edit
 
-- `index.html`: introduction, background, experience and contact link.
+- `index.html`: introduction, background, experience and contact link (English).
+- `translations.js`: Greek text for the homepage; see *Greek homepage* below.
 - `style.css`: layout, colors and responsive styles.
 - `favicon.svg`: browser icon.
 
 The professional background is based on the owner's LinkedIn profile. There are no fabricated projects, clients, testimonials, or performance metrics. Add project case studies when the owner provides material suitable for publication.
 
+## Greek homepage
+
+`el/index.html` is the Greek homepage (https://tsakioan.com/el/). It is **generated** from `index.html` and the Greek text in `translations.js`, so do not edit it by hand:
+
+1. Edit the English text in `index.html`.
+2. Add or update the matching Greek text in `translations.js`. Each key is the English text, with line breaks and repeated spaces collapsed to one space.
+3. Run `node tools/build-greek.mjs` (Node.js 18 or newer). It rewrites `el/index.html` and lists any English text it left untranslated; brand names and board labels are expected in that list.
+4. Commit both files. `node tools/build-greek.mjs --check` fails if `el/index.html` is out of date.
+
+Both homepages carry `hreflang` links to each other, and `sitemap.xml` lists them for search engines. The language button links between `/` and `/el/` and remembers the choice; visitors who chose Greek are sent from `/` to `/el/` on later visits. `og-image-el.png` is the Greek link-preview image.
+
 ## Updating files
 
-Every page loads CSS, JS and the favicon with the same `?v=YYYYMMDD` tag, so browsers fetch fresh copies after a change. When you edit an asset, change the tag to the new date on **all** pages (`index.html`, `network.html`, `print-test.html`, `privacy.html`).
+Every page loads CSS, JS and the favicon with the same `?v=` tag (the date, plus a letter for a second change on the same day), so browsers fetch fresh copies after a change. When you edit an asset, change the tag on **all** pages (`index.html`, `network.html`, `print-test.html`, `privacy.html`), then rebuild the Greek homepage.
 
 `og-image.png` (1200×630) is the preview image shown when the site is shared on LinkedIn and other networks.
 

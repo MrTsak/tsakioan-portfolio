@@ -39,12 +39,14 @@
     const printLink = demo.querySelector('.demo-print-link');
     printLink.hidden = selected !== 'hardware';
     printLink.textContent = document.documentElement.lang === 'el' ? 'Κατέβασε μια δοκιμαστική σελίδα για τον εκτυπωτή σου →' : 'Try your own printer: open the test sheet →';
-    printLink.href = 'print-test.html?lang=' + document.documentElement.lang;
+    // The Greek page lives in el/, so links to the tools need its data-root prefix ("../").
+    const root = document.documentElement.dataset.root || '';
+    printLink.href = root + 'print-test.html?lang=' + document.documentElement.lang;
     let networkLink = demo.querySelector('.demo-network-link');
     if (!networkLink) { networkLink = document.createElement('a'); networkLink.className = 'demo-print-link demo-network-link'; demo.append(networkLink); }
     networkLink.hidden = selected !== 'network';
     networkLink.textContent = document.documentElement.lang === 'el' ? 'Υπολογισμός IP και υποδικτύου' : 'IP and network calculator';
-    networkLink.href = 'network.html?lang=' + document.documentElement.lang;
+    networkLink.href = root + 'network.html?lang=' + document.documentElement.lang;
     demo.dataset.kind = selected;
     demo.dataset.step = String(step);
     demo.querySelector('.demo-label').textContent = t('label');
