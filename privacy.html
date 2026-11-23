@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- The Greek translation is el/privacy.html, maintained by hand. Update both pages together. -->
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -19,10 +20,21 @@
   <meta property="og:locale:alternate" content="el_GR">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://tsakioan.com/privacy.html">
-  <link rel="icon" href="favicon.svg?v=20261123c" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=20261123c">
+  <link rel="alternate" hreflang="en" href="https://tsakioan.com/privacy.html">
+  <link rel="alternate" hreflang="el" href="https://tsakioan.com/el/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://tsakioan.com/privacy.html">
+  <script id="language-redirect">
+    // Visitors who last viewed Greek pages get the Greek version.
+    try {
+      if (localStorage.getItem("tsakioan-language") === "el")
+        location.replace("el/privacy.html" + location.hash);
+    } catch {}
+  </script>
+  <link rel="icon" href="favicon.svg?v=20261123d" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css?v=20261123d">
   <style>
-    .privacy-header{gap:24px;flex-wrap:wrap}.privacy-header>a:last-child{margin-left:auto;font-size:1rem}
+    .privacy-header{gap:24px;flex-wrap:wrap}.privacy-header .back{margin-left:auto;font-size:1rem}
+    @media(max-width:720px){.privacy-header{gap:12px 16px;padding:16px 0}.privacy-header .back{order:3;width:100%;margin-left:0}}
     .privacy{max-width:780px;padding-top:52px;padding-bottom:72px;overflow-wrap:anywhere}
     .privacy h1{font-size:clamp(2.5rem,7vw,4rem);line-height:1.15;letter-spacing:-1.5px;margin:12px 0 20px}
     .privacy h2{font-size:1.4rem;letter-spacing:-.3px;margin:36px 0 12px;line-height:1.4}
@@ -34,7 +46,7 @@
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <header class="site-header wrap privacy-header"><a class="wordmark" href="/" aria-label="Tsakioan home">tsakioan<span aria-hidden="true">✳</span></a><a href="/">Back to portfolio</a></header>
+  <header class="site-header wrap privacy-header"><a class="wordmark" href="/" aria-label="Tsakioan home">tsakioan<span aria-hidden="true">✳</span></a><a class="back" href="/">Back to portfolio</a><a class="language-toggle" href="el/privacy.html" hreflang="el" lang="el" aria-label="Αλλαγή σε Ελληνικά">Ελληνικά</a></header>
   <main class="privacy wrap" id="main">
     <p class="eyebrow">YOUR INFORMATION</p>
     <h1>Privacy policy</h1>
@@ -64,5 +76,6 @@
     <p>Links to LinkedIn and other services take you to websites governed by their own privacy notices. This policy will be updated when the site or its handling of information changes; the date above identifies the latest revision.</p>
   </main>
   <footer class="wrap"><a class="wordmark" href="/">tsakioan<span aria-hidden="true">✳</span></a><span>Ioannis Tsakalidis</span><a href="#main">Back to top</a></footer>
+  <script src="language.js?v=20261123d" defer></script>
 </body>
 </html>
