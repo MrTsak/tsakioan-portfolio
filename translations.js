@@ -13,6 +13,15 @@
       "Τεχνικός υπολογιστών και δικτύων στη Λάρισα, φοιτητής Τεχνητής Νοημοσύνης. Τεχνική υποστήριξη, δίκτυα και επισκευή εκτυπωτών Xerox και Lexmark.",
     "tsakioan — Hands-on IT. From diagnosis to repair. Ioannis Tsakalidis, Larissa, Greece.":
       "tsakioan — Πληροφορική στην πράξη. Από τη διάγνωση στην επισκευή. Ιωάννης Τσακαλίδης, Λάρισα.",
+    // Page titles, search descriptions and link previews of the calculator and test sheet
+    "IP & network calculator · Tsakioan": "Υπολογισμός IP και υποδικτύου · Tsakioan",
+    "Calculate IPv4 subnet details and compare printer and computer addresses in English or Greek.":
+      "Υπολόγισε τα στοιχεία ενός υποδικτύου IPv4 και σύγκρινε τις διευθύνσεις ενός υπολογιστή και ενός εκτυπωτή.",
+    "Calculate IPv4 subnet details and check whether a computer and a printer are on the same subnet. Runs entirely in your browser.":
+      "Υπολόγισε τα στοιχεία ενός υποδικτύου IPv4 και έλεγξε αν ένας υπολογιστής και ένας εκτυπωτής βρίσκονται στο ίδιο υποδίκτυο. Λειτουργεί εξ ολοκλήρου στον browser σου.",
+    "Printer test sheet · Tsakioan": "Δοκιμαστική εκτύπωση · Tsakioan",
+    "A low-coverage printer test sheet in English and Greek: print it in your browser or download the PDF.":
+      "Δοκιμαστική σελίδα εκτύπωσης χαμηλής κάλυψης, στα Ελληνικά και στα Αγγλικά: εκτύπωσέ τη από τον browser ή κατέβασε το PDF.",
     // Page text
     "Tap a component to explore my work. Flip the power switch to bring the board to life.":
       "Πάτησε σε ένα από τα εξαρτήματα για να μάθεις περισσότερα για τη δουλειά μου. Με τον διακόπτη μπορείς να ανάψεις ή να σβήσεις την πλακέτα.",

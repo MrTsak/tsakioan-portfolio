@@ -12,7 +12,29 @@
     <xhtml:link rel="alternate" hreflang="el" href="https://tsakioan.com/el/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tsakioan.com/"/>
   </url>
-  <url><loc>https://tsakioan.com/network.html</loc></url>
-  <url><loc>https://tsakioan.com/print-test.html</loc></url>
+  <url>
+    <loc>https://tsakioan.com/network.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tsakioan.com/network.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://tsakioan.com/el/network.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tsakioan.com/network.html"/>
+  </url>
+  <url>
+    <loc>https://tsakioan.com/el/network.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tsakioan.com/network.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://tsakioan.com/el/network.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tsakioan.com/network.html"/>
+  </url>
+  <url>
+    <loc>https://tsakioan.com/print-test.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tsakioan.com/print-test.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://tsakioan.com/el/print-test.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tsakioan.com/print-test.html"/>
+  </url>
+  <url>
+    <loc>https://tsakioan.com/el/print-test.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tsakioan.com/print-test.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://tsakioan.com/el/print-test.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tsakioan.com/print-test.html"/>
+  </url>
   <url><loc>https://tsakioan.com/privacy.html</loc></url>
 </urlset>

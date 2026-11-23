@@ -1,0 +1,315 @@
+<!doctype html>
+<!-- Generated from network.html by tools/build-greek.mjs. Do not edit by hand. -->
+<html lang="el">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Υπολογισμός IP και υποδικτύου · Tsakioan</title>
+    <link rel="canonical" href="https://tsakioan.com/el/network.html" />
+    <link rel="alternate" hreflang="en" href="https://tsakioan.com/network.html" />
+    <link rel="alternate" hreflang="el" href="https://tsakioan.com/el/network.html" />
+    <link rel="alternate" hreflang="x-default" href="https://tsakioan.com/network.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tsakioan" />
+    <meta property="og:title" content="Υπολογισμός IP και υποδικτύου · Tsakioan" />
+    <meta
+      property="og:description"
+      content="Υπολόγισε τα στοιχεία ενός υποδικτύου IPv4 και έλεγξε αν ένας υπολογιστής και ένας εκτυπωτής βρίσκονται στο ίδιο υποδίκτυο. Λειτουργεί εξ ολοκλήρου στον browser σου."
+    />
+    <meta property="og:url" content="https://tsakioan.com/el/network.html" />
+    <meta property="og:image" content="https://tsakioan.com/og-image-el.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="tsakioan — Πληροφορική στην πράξη. Από τη διάγνωση στην επισκευή. Ιωάννης Τσακαλίδης, Λάρισα."
+    />
+    <meta property="og:locale" content="el_GR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="description"
+      content="Υπολόγισε τα στοιχεία ενός υποδικτύου IPv4 και σύγκρινε τις διευθύνσεις ενός υπολογιστή και ενός εκτυπωτή."
+    />
+    <link rel="icon" href="../favicon.svg?v=20261123c" type="image/svg+xml" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #0d1c30;
+        color: #e8f1ff;
+        font:
+          16px/1.65 Arial,
+          sans-serif;
+      }
+      main {
+        max-width: 920px;
+        margin: auto;
+        padding: 24px 24px 64px;
+      }
+      header,
+      .actions {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      header {
+        justify-content: space-between;
+        margin-bottom: 36px;
+      }
+      a {
+        color: #acd2ff;
+        text-underline-offset: 4px;
+      }
+      h1 {
+        font-size: clamp(30px, 5vw, 44px);
+        line-height: 1.2;
+      }
+      h2 {
+        font-size: 23px;
+        margin-top: 0;
+      }
+      .eyebrow {
+        font-size: 12px;
+        letter-spacing: 2px;
+        color: #94c9ff;
+      }
+      .intro,
+      .hint {
+        color: #bed0e7;
+      }
+      .hint {
+        font-size: 14px;
+      }
+      .panel {
+        border: 1px solid #3b5d80;
+        border-radius: 12px;
+        padding: 26px;
+        margin-top: 26px;
+        background: #142940;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+      input,
+      textarea {
+        width: 100%;
+        min-width: 0;
+        border: 1px solid #6383a4;
+        border-radius: 6px;
+        background: #0c1d30;
+        color: #eff6ff;
+        padding: 12px;
+        font: 16px/1.5 Arial;
+        min-height: 48px;
+      }
+      button {
+        min-height: 48px;
+        border: 1px solid #89b8e8;
+        border-radius: 7px;
+        padding: 12px 18px;
+        background: #1b3d5d;
+        color: #eff6ff;
+        font: 600 15px/1.4 Arial;
+        cursor: pointer;
+      }
+      #language {
+        display: inline-flex;
+        align-items: center;
+        min-height: 48px;
+        border: 1px solid #89b8e8;
+        border-radius: 7px;
+        padding: 12px 18px;
+        background: #1b3d5d;
+        color: #eff6ff;
+        font: 600 15px/1.4 Arial;
+        text-decoration: none;
+      }
+      button:hover,
+      #language:hover {
+        background: #2a5277;
+      }
+      .primary {
+        background: #bfdfff;
+        color: #10233a;
+      }
+      input:focus-visible,
+      button:focus-visible,
+      a:focus-visible,
+      textarea:focus-visible {
+        outline: 3px solid #90c8ff;
+        outline-offset: 3px;
+      }
+      .actions {
+        margin-top: 24px;
+      }
+      .notice {
+        border-left: 3px solid #8bbfff;
+        padding: 12px 18px;
+        background: #142c46;
+      }
+      .error {
+        color: #ffd0c7;
+      }
+      .status {
+        min-height: 26px;
+      }
+      dl {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        margin: 0;
+      }
+      dt,
+      dd {
+        padding: 12px 0;
+        border-bottom: 1px solid #3b5d80;
+      }
+      dd {
+        margin: 0;
+        font-family: monospace;
+        font-size: 17px;
+        overflow-wrap: anywhere;
+      }
+      footer {
+        margin-top: 30px;
+      }
+      footer a {
+        display: inline-block;
+        margin: 8px 20px 8px 0;
+      }
+      [hidden] {
+        display: none !important;
+      }
+      @media (max-width: 600px) {
+        main {
+          padding: 20px 18px 44px;
+        }
+        .panel {
+          padding: 22px 16px;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .actions button {
+          width: 100%;
+        }
+        dl {
+          grid-template-columns: 1fr;
+        }
+        dt {
+          border: 0;
+          padding: 14px 0 0;
+          color: #bed0e7;
+        }
+        dd {
+          padding: 0 0 12px;
+        }
+        h1 {
+          font-size: 32px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <a href="./" data-t="back">Επιστροφή στο portfolio</a
+        ><a id="language" href="../network.html" hreflang="en" lang="en" aria-label="Switch to English">English</a>
+      </header>
+      <div class="eyebrow">TSAKIOAN / IT TOOLKIT</div>
+      <h1 data-t="title">Υπολογισμός υποδικτύου.</h1>
+      <p class="intro" data-t="intro">
+        Συμπλήρωσε μια διεύθυνση IPv4 και τη μάσκα υποδικτύου για να δεις το εύρος των διευθύνσεων. Μπορείς επίσης να ελέγξεις αν ένας υπολογιστής και ένας εκτυπωτής ανήκουν στο ίδιο υποδίκτυο.
+      </p>
+      <p class="notice" data-t="privacy">
+        Οι υπολογισμοί γίνονται στον browser. Οι διευθύνσεις δεν αποστέλλονται ούτε αποθηκεύονται. Το εργαλείο δεν σαρώνει ούτε αλλάζει το δίκτυό σου.
+      </p>
+      <form id="calculator" novalidate>
+        <section class="panel">
+          <h2 data-t="settings">Ρυθμίσεις δικτύου</h2>
+          <div class="grid">
+            <div>
+              <label for="address" data-t="address">Διεύθυνση IPv4 υπολογιστή / συσκευής</label
+              ><input
+                id="address"
+                inputmode="decimal"
+                autocomplete="off"
+                spellcheck="false"
+                placeholder="192.168.1.20"
+                maxlength="32"
+                aria-describedby="ip-hint"
+              />
+              <p id="ip-hint" class="hint" data-t="ipHint">
+                Γράψε τέσσερις αριθμούς από 0 έως 255, χωρισμένους με τελείες. Μόνο IPv4.
+              </p>
+            </div>
+            <div>
+              <label for="mask" data-t="mask">Μάσκα υποδικτύου ή πρόθεμα CIDR</label
+              ><input
+                id="mask"
+                autocomplete="off"
+                spellcheck="false"
+                value="24"
+                maxlength="32"
+                aria-describedby="mask-hint"
+              />
+              <p id="mask-hint" class="hint" data-t="maskHint">
+                Παράδειγμα: 255.255.255.0, 24 ή /24. Υποστηρίζονται προθέματα /0–/32.
+              </p>
+            </div>
+          </div>
+          <label for="other" data-t="other">IPv4 εκτυπωτή / δεύτερης συσκευής (προαιρετικό)</label
+          ><input
+            id="other"
+            inputmode="decimal"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="192.168.1.50"
+            maxlength="32"
+            aria-describedby="other-hint"
+          />
+          <p id="other-hint" class="hint" data-t="otherHint">
+            Για τη σύγκριση χρησιμοποιείται η ίδια μάσκα και για τις δύο συσκευές. Έλεγξε πρώτα ότι έχουν όντως την ίδια μάσκα στις ρυθμίσεις τους.
+          </p>
+          <div class="actions">
+            <button class="primary" type="submit" data-t="calculate">Υπολογισμός</button
+            ><button id="example" type="button" data-t="example">Δες ένα παράδειγμα</button>
+          </div>
+          <p id="error" class="error" role="alert"></p>
+        </section>
+      </form>
+      <section id="results" class="panel" hidden aria-labelledby="result-title">
+        <h2 id="result-title" data-t="results">Στοιχεία υποδικτύου</h2>
+        <dl id="details"></dl>
+        <p id="special" class="notice" hidden></p>
+        <p id="comparison" class="notice" hidden></p>
+        <p class="hint" data-t="limit">
+          Το εργαλείο υπολογίζει διευθύνσεις· δεν ελέγχει αν οι συσκευές επικοινωνούν. Ακόμη κι αν βρίσκονται στο ίδιο υποδίκτυο, μπορεί να υπάρχει πρόβλημα με την καλωδίωση ή περιορισμός από VLAN, απομόνωση Wi-Fi ή firewall. Οι διευθύνσεις που εμφανίζονται δεν είναι απαραίτητα ελεύθερες ή κατάλληλες για χρήση στο δίκτυό σου.
+        </p>
+        <div class="actions">
+          <button id="copy" type="button" data-t="copy">Αντιγραφή σύνοψης</button>
+        </div>
+        <textarea id="summary" readonly hidden aria-label="Summary / Σύνοψη" rows="9"></textarea>
+        <p id="status" class="status" role="status"></p>
+      </section>
+      <footer><a id="test-link" href="print-test.html" data-t="test">Σελίδα δοκιμαστικής εκτύπωσης</a></footer>
+      <noscript
+        >Enable JavaScript to calculate. / Ενεργοποίησε τη JavaScript για υπολογισμό.</noscript
+      >
+    </main>
+    <script src="../network-core.js?v=20261123c"></script>
+    <script src="../network-strings.js?v=20261123c"></script>
+    <script src="../network.js?v=20261123c"></script>
+  </body>
+</html>
