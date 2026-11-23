@@ -149,7 +149,9 @@
     if (node.parentElement.closest("script,style,.pcb-detail,.power-state,.language-toggle"))
       continue;
     const original = node.textContent;
-    if (greek[original.trim()]) texts.push({ node, original });
+    // Collapse whitespace so wrapped lines in index.html still match the dictionary keys.
+    const key = original.replace(/\s+/g, " ").trim();
+    if (greek[key]) texts.push({ node, original, key });
   }
   const labels = [...document.querySelectorAll("[aria-label]")].map((node) => ({
     node,
@@ -164,8 +166,9 @@
   window.siteLanguage = { t: translate };
   function apply() {
     document.documentElement.lang = language;
-    texts.forEach(({ node, original }) => {
-      node.textContent = original.replace(original.trim(), translate(original.trim()));
+    texts.forEach(({ node, original, key }) => {
+      node.textContent =
+        language === "el" ? original.replace(original.trim(), translate(key)) : original;
     });
     labels.forEach(({ node, original }) => node.setAttribute("aria-label", translate(original)));
     toggle.textContent = language === "el" ? "English" : "Ελληνικά";
