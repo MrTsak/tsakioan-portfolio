@@ -156,7 +156,7 @@
     "(opens in a new tab)": "(ανοίγει σε νέα καρτέλα)",
     "Ioannis Tsakalidis": "Ιωάννης Τσακαλίδης",
     "Back to top": "Επιστροφή στην αρχή",
-    "Privacy policy": "Πολιτική απορρήτου (στα Αγγλικά)",
+    "Privacy policy": "Πολιτική απορρήτου",
     "Tsakioan home": "Tsakioan — Αρχική",
     "Main navigation": "Κύρια πλοήγηση",
     "Interactive circuit board": "Διαδραστική πλακέτα",

@@ -5,10 +5,14 @@
 //   network.html     + network-strings.js  -> el/network.html
 //   print-test.html  (data-el attributes)  -> el/print-test.html
 //
-//   node tools/build-greek.mjs          write the el/ pages
+// el/privacy.html is a translation maintained by hand. This script only checks that its
+// "last updated" date matches privacy.html, so the two are revised together.
+//
+//   node tools/build-greek.mjs          write the generated el/ pages
 //   node tools/build-greek.mjs --check  exit 1 if any el/ page is out of date
 //
-// Edit the English pages and the Greek text, then run this script. Do not edit el/ by hand.
+// Edit the English pages and the Greek text, then run this script. Do not edit the generated
+// el/ pages by hand.
 // Needs Node.js 18 or newer and nothing else.
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
@@ -24,7 +28,14 @@ const site = "https://tsakioan.com/";
 const checkOnly = process.argv.includes("--check");
 
 // Pages with a Greek version. Links to them stay relative, so from el/ they open the Greek page.
-const localized = new Set(["", "./", "index.html", "network.html", "print-test.html"]);
+const localized = new Set([
+  "",
+  "./",
+  "index.html",
+  "network.html",
+  "print-test.html",
+  "privacy.html",
+]);
 
 const normalize = (text) => text.replace(/\s+/g, " ").trim();
 const decode = (text) =>
@@ -197,6 +208,35 @@ function translateTestSheet(part, file) {
 build("index.html", translateHomepage);
 build("network.html", translateNetwork);
 build("print-test.html", translateTestSheet);
+
+// The privacy policy is translated by hand; make sure both versions carry the same revision date.
+const months = {
+  January: "Ιανουαρίου",
+  February: "Φεβρουαρίου",
+  March: "Μαρτίου",
+  April: "Απριλίου",
+  May: "Μαΐου",
+  June: "Ιουνίου",
+  July: "Ιουλίου",
+  August: "Αυγούστου",
+  September: "Σεπτεμβρίου",
+  October: "Οκτωβρίου",
+  November: "Νοεμβρίου",
+  December: "Δεκεμβρίου",
+};
+const dateOf = (file) =>
+  (readFileSync(join(root, file), "utf8").match(/class="date">[^<]*?(\d{1,2} \S+ \d{4})</) ||
+    [])[1];
+const englishDate = dateOf("privacy.html");
+const greekDate = dateOf("el/privacy.html");
+const [day, month, year] = (englishDate || "").split(" ");
+if (!englishDate || !greekDate || greekDate !== `${day} ${months[month]} ${year}`) {
+  console.error(
+    `build-greek: privacy.html is dated "${englishDate}" but el/privacy.html is dated "${greekDate}". ` +
+      "Update the Greek translation and its date.",
+  );
+  failed = true;
+} else console.log("el/privacy.html has the same date as privacy.html.");
 
 if (failed) process.exit(1);
 if (!checkOnly && untranslated.size) {

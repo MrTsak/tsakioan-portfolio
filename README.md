@@ -23,7 +23,9 @@ The Greek pages live in `el/` (https://tsakioan.com/el/). They are **generated**
 
 Page titles, descriptions and link-preview text for all three pages are in `translations.js`.
 
-1. Edit the English page and its Greek text.
+`el/privacy.html` is the exception: the Greek privacy policy is a translation **maintained by hand**. When you change `privacy.html`, update `el/privacy.html` to match and give both the same *Last updated* date; the build and the GitHub check fail if the dates differ.
+
+1. Edit the English page and its Greek text (for the privacy policy, both pages).
 2. Run `node tools/build-greek.mjs` (Node.js 18 or newer). It rewrites the `el/` pages and lists homepage text it left in English; brand names and board labels are expected in that list. It stops with an error if English text in `network.html` or `print-test.html` no longer matches its source.
 3. Commit everything. A GitHub check runs `node tools/build-greek.mjs --check` and fails if an `el/` page is out of date.
 
