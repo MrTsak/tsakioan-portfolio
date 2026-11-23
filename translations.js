@@ -39,7 +39,7 @@
     "IT support": "Τεχνική υποστήριξη",
     "Syzefxis II": "ΣΥΖΕΥΞΙΣ II",
     INTERNSHIP: "ΠΡΑΚΤΙΚΗ ΑΣΚΗΣΗ",
-    "Computer Technical Specialist": "Τεχνικός Υπολογιστών",
+    "Computer & Network Technician Intern": "Τεχνικός Υπολογιστών & Δικτύων (πρακτική άσκηση)",
     "Region of Thessaly": "Περιφέρεια Θεσσαλίας",
     "Larissa, Greece · November 2022–August 2023": "Λάρισα, Ελλάδα · Νοέμβριος 2022–Αύγουστος 2023",
     "Supported daily IT operations across departments and helped employees resolve computer and software issues.":
