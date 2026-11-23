@@ -5,7 +5,7 @@
   const parts = [...document.querySelectorAll('.pcb-part')];
   const content = {
     network: ['Networks that connect.', 'Structured cabling, system setup, troubleshooting, and fault restoration—including work on Syzefxis II.'],
-    hardware: ['Hands-on with hardware.', 'Computer support, hardware maintenance, and printer repair, backed by my Xerox printer certification.'],
+    hardware: ['Hands-on with hardware.', 'Computer support, hardware maintenance, and printer repair, backed by official Xerox and Lexmark service training.'],
     ai: ['Still learning. Always curious.', 'I’m studying Artificial Intelligence at Aegean College and exploring how programming and automation can support everyday IT work.']
   };
   const demo = document.querySelector('.pcb-demo');
