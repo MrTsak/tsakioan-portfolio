@@ -1,7 +1,55 @@
-(function(root){
-  function ip(s){if(!/^(0|[1-9]\d{0,2})(\.(0|[1-9]\d{0,2})){3}$/.test(s.trim()))throw Error('ip');const a=s.trim().split('.').map(Number);if(a.some(n=>n>255))throw Error('ip');return a.reduce((n,x)=>n*256+x,0);}
-  function dotted(n){return [24,16,8,0].map(s=>(n>>>s)&255).join('.');}
-  function prefix(s){s=s.trim();if(/^\/?\d{1,2}$/.test(s)){const p=Number(s.replace('/',''));if(p<=32)return p;throw Error('mask');}let m;try{m=ip(s);}catch{throw Error('mask');}const bits=m.toString(2).padStart(32,'0');if(!/^1*0*$/.test(bits))throw Error('mask');return bits.indexOf('0')<0?32:bits.indexOf('0');}
-  function calculate(address,mask,other){const a=ip(address),p=prefix(mask),size=2**(32-p),net=Math.floor(a/size)*size,end=net+size-1;let b=null;if(other.trim())b=ip(other);return {address:dotted(a),prefix:p,mask:dotted(4294967296-size),network:dotted(net),broadcast:p<31?dotted(end):null,first:dotted(p<31?net+1:net),last:dotted(p<31?end-1:end),hosts:p<31?size-2:size,invalidHost:p<31&&(a===net||a===end),otherInvalid:p<31&&b!==null&&(b%size===0||b%size===size-1),same:b===null?null:Math.floor(b/size)===Math.floor(a/size),duplicate:b===a,other:b===null?null:dotted(b)};}
-  const api={ip,prefix,dotted,calculate};if(typeof module!=='undefined')module.exports=api;else root.NetworkCalc=api;
-})(typeof window!=='undefined'?window:this);
+(function (root) {
+  function ip(s) {
+    if (!/^(0|[1-9]\d{0,2})(\.(0|[1-9]\d{0,2})){3}$/.test(s.trim())) throw Error("ip");
+    const a = s.trim().split(".").map(Number);
+    if (a.some((n) => n > 255)) throw Error("ip");
+    return a.reduce((n, x) => n * 256 + x, 0);
+  }
+  function dotted(n) {
+    return [24, 16, 8, 0].map((s) => (n >>> s) & 255).join(".");
+  }
+  function prefix(s) {
+    s = s.trim();
+    if (/^\/?\d{1,2}$/.test(s)) {
+      const p = Number(s.replace("/", ""));
+      if (p <= 32) return p;
+      throw Error("mask");
+    }
+    let m;
+    try {
+      m = ip(s);
+    } catch {
+      throw Error("mask");
+    }
+    const bits = m.toString(2).padStart(32, "0");
+    if (!/^1*0*$/.test(bits)) throw Error("mask");
+    return bits.indexOf("0") < 0 ? 32 : bits.indexOf("0");
+  }
+  function calculate(address, mask, other) {
+    const a = ip(address),
+      p = prefix(mask),
+      size = 2 ** (32 - p),
+      net = Math.floor(a / size) * size,
+      end = net + size - 1;
+    let b = null;
+    if (other.trim()) b = ip(other);
+    return {
+      address: dotted(a),
+      prefix: p,
+      mask: dotted(4294967296 - size),
+      network: dotted(net),
+      broadcast: p < 31 ? dotted(end) : null,
+      first: dotted(p < 31 ? net + 1 : net),
+      last: dotted(p < 31 ? end - 1 : end),
+      hosts: p < 31 ? size - 2 : size,
+      invalidHost: p < 31 && (a === net || a === end),
+      otherInvalid: p < 31 && b !== null && (b % size === 0 || b % size === size - 1),
+      same: b === null ? null : Math.floor(b / size) === Math.floor(a / size),
+      duplicate: b === a,
+      other: b === null ? null : dotted(b),
+    };
+  }
+  const api = { ip, prefix, dotted, calculate };
+  if (typeof module !== "undefined") module.exports = api;
+  else root.NetworkCalc = api;
+})(typeof window !== "undefined" ? window : this);
