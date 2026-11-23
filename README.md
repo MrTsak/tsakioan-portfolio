@@ -31,6 +31,12 @@ Page titles, descriptions and link-preview text for all three pages are in `tran
 
 Each page and its Greek version carry `hreflang` links to each other, and `sitemap.xml` lists them for search engines. The language button links between the two versions. Each page remembers its language in the browser, so visitors who last viewed Greek are sent to the Greek version when they open an English URL (for example from the privacy page), and old `?lang=el` links still open the Greek page. `og-image-el.png` is the Greek link-preview image.
 
+## CV downloads
+
+`cv-en.pdf` and `cv-el.pdf` are the CV downloads linked from the contact section of the English and Greek homepages. They are public copies of the Word CVs with the phone number and personal Gmail address replaced by info@tsakioan.com. The Word files themselves are not in the repository.
+
+To update a CV, export the new version from Word as PDF (File → Save As → PDF, so the Aptos font is kept), apply the same contact change, and save it under the same name (`cv-en.pdf` or `cv-el.pdf`). Then change the asset version tag on all pages, as described below.
+
 ## Page not found
 
 `404.html` is the page GitHub Pages shows for any missing address. GitHub serves it at the missing address itself (for example `/el/old/page`), so its links and assets use paths from the site root (`/style.css`). It holds an English and a Greek version and shows Greek for missing addresses under `/el/` or for visitors who last viewed Greek pages; without JavaScript both versions are shown. It is marked `noindex` and is not in the sitemap. If you add a page, add it to the links on `404.html` too.

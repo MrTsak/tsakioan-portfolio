@@ -122,6 +122,12 @@ function build(file, translateBody) {
     return ` ${attr}="../${url}"`;
   });
 
+  // 6a. The homepage CV link points to the Greek CV on the Greek page.
+  if (file === "index.html") {
+    if (!html.includes('href="../cv-en.pdf"')) fail(`${file}: CV link not found`);
+    html = html.replace('href="../cv-en.pdf"', 'href="../cv-el.pdf"');
+  }
+
   // 6. The language switch points back to the English page.
   const toggle = /<a\s[^>]*?\b(class="language-toggle"|id="language")[^>]*>[\s\S]*?<\/a\s*>/;
   if (!toggle.test(html)) fail(`${file}: no language switch found`);
