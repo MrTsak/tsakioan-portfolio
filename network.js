@@ -104,6 +104,7 @@
     document.querySelectorAll("[data-t]").forEach((e) => (e.textContent = t(e.dataset.t)));
     $("language").textContent = lang === "en" ? "Ελληνικά" : "English";
     $("test-link").href = "print-test.html?lang=" + lang;
+    document.querySelector("[data-t=back]").href = lang === "el" ? "el/" : "./";
     $("error").textContent = errorKey ? t(errorKey) : "";
     $("status").textContent = "";
     if (result) show();
