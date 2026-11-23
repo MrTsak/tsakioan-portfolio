@@ -1,6 +1,6 @@
 # Tsakioan portfolio
 
-Personal portfolio for Ioannis Tsakalidis. Plain HTML and CSS; no build step, paid service, database, or API keys are required. Google Fonts is optional: system fallback fonts work if the font service is unavailable.
+Personal portfolio for Ioannis Tsakalidis. Plain HTML and CSS; no build step, paid service, database, or API keys are required. Fonts (DM Sans and Manrope, SIL Open Font License) are self-hosted in `fonts/`, so pages make no third-party requests.
 
 ## Edit
 
@@ -9,6 +9,12 @@ Personal portfolio for Ioannis Tsakalidis. Plain HTML and CSS; no build step, pa
 - `favicon.svg`: browser icon.
 
 The professional background is based on the owner's LinkedIn profile. There are no fabricated projects, clients, testimonials, or performance metrics. Add project case studies when the owner provides material suitable for publication.
+
+## Updating files
+
+Every page loads CSS, JS and the favicon with the same `?v=YYYYMMDD` tag, so browsers fetch fresh copies after a change. When you edit an asset, change the tag to the new date on **all** pages (`index.html`, `network.html`, `print-test.html`, `privacy.html`).
+
+`og-image.png` (1200×630) is the preview image shown when the site is shared on LinkedIn and other networks.
 
 ## Free hosting on GitHub Pages
 
