@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://tsakioan.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tsakioan.com/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://tsakioan.com/el/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tsakioan.com/"/>
+  </url>
+  <url>
+    <loc>https://tsakioan.com/el/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tsakioan.com/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://tsakioan.com/el/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tsakioan.com/"/>
+  </url>
+  <url><loc>https://tsakioan.com/network.html</loc></url>
+  <url><loc>https://tsakioan.com/print-test.html</loc></url>
+  <url><loc>https://tsakioan.com/privacy.html</loc></url>
+</urlset>
