@@ -144,6 +144,10 @@
     "BSc (Hons) Computing (AI)": "BSc (Hons) Computing (Τεχνητή Νοημοσύνη)",
     "University of Essex · Aegean College · In progress":
       "University of Essex · Aegean College · Σε εξέλιξη",
+    "Project: Diabetes Risk Explorer": "Έργο: Diabetes Risk Explorer",
+    "A machine-learning study of 100,000 health records. Explore the data, compare two models and try a live risk estimate in your browser.":
+      "Μελέτη μηχανικής μάθησης σε 100.000 αρχεία υγείας. Εξερεύνησε τα δεδομένα, σύγκρινε δύο μοντέλα και δοκίμασε μια ζωντανή εκτίμηση κινδύνου στον browser σου (η σελίδα είναι στα αγγλικά).",
+    "Open the project": "Άνοιξε το έργο",
     "Download CV (PDF)": "Κατέβασε το βιογραφικό (PDF)",
     "KEEP THE CONVERSATION GOING": "ΑΣ ΜΙΛΗΣΟΥΜΕ",
     "Let’s talk": "Θέλεις να",
