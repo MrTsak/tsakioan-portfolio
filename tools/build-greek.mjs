@@ -124,7 +124,7 @@ function build(file, translateBody) {
       alternateName: "Ioannis Tsakalidis",
       url: site + "el/",
       jobTitle: "Εκπρόσωπος Τεχνικών Υπηρεσιών",
-      worksFor: { "@type": "Organization", name: "COPYPRINT E.E." },
+      worksFor: { "@type": "Organization", name: "CopyPrint E.E." },
       address: {
         "@type": "PostalAddress",
         addressLocality: "Λάρισα",
