@@ -107,7 +107,7 @@
     "Computer networks": "Δίκτυα υπολογιστών",
     "Hardware maintenance": "Συντήρηση εξοπλισμού",
     "Artificial intelligence": "Τεχνητή νοημοσύνη",
-    "THE PERSON BEHIND THE HANDLE": "Ο ΑΝΘΡΩΠΟΣ ΠΙΣΩ ΑΠΟ ΤΟ TSAKIOAN",
+    "A FEW WORDS ABOUT ME": "ΛΙΓΑ ΛΟΓΙΑ ΓΙΑ ΕΜΕΝΑ",
     "Curiosity meets": "Η περιέργεια συναντά",
     "practical experience.": "την πρακτική εμπειρία.",
     "I’m Ioannis, a computer and network technician based in Larissa, Greece. My background is hands-on: technical support, hardware maintenance, printer repair, and getting networks up and running.":
