@@ -4,14 +4,14 @@
 (function (root) {
   const strings = {
     back: ["Back to portfolio", "Επιστροφή στο portfolio"],
-    title: ["Understand your network.", "Υπολογισμός υποδικτύου."],
+    title: ["Understand your network.", "Κατανόησε το δίκτυό σου."],
     intro: [
       "Find IPv4 subnet details and compare a computer with a printer or another device.",
       "Συμπλήρωσε μια διεύθυνση IPv4 και τη μάσκα υποδικτύου για να δεις το εύρος των διευθύνσεων. Μπορείς επίσης να ελέγξεις αν ένας υπολογιστής και ένας εκτυπωτής ανήκουν στο ίδιο υποδίκτυο.",
     ],
     privacy: [
       "Calculations happen in this browser. Addresses are not uploaded or saved. This tool does not scan or change your network.",
-      "Οι υπολογισμοί γίνονται στον browser. Οι διευθύνσεις δεν αποστέλλονται ούτε αποθηκεύονται. Το εργαλείο δεν σαρώνει ούτε αλλάζει το δίκτυό σου.",
+      "Οι υπολογισμοί γίνονται στον περιηγητή σου. Οι διευθύνσεις δεν αποστέλλονται ούτε αποθηκεύονται. Το εργαλείο δεν σαρώνει ούτε αλλάζει το δίκτυό σου.",
     ],
     settings: ["Network settings", "Ρυθμίσεις δικτύου"],
     address: ["Computer / device IPv4 address", "Διεύθυνση IPv4 υπολογιστή / συσκευής"],
@@ -47,7 +47,7 @@
     ],
     different: [
       "These addresses are in different subnets with this mask. Communication would require appropriate routing.",
-      "Οι διευθύνσεις βρίσκονται σε διαφορετικά υποδίκτυα με αυτή τη μάσκα. Για επικοινωνία χρειάζεται κατάλληλη δρομολόγηση.",
+      "Οι διευθύνσεις βρίσκονται σε διαφορετικά υποδίκτυα με αυτή τη μάσκα. Για να επικοινωνήσουν, απαιτείται κατάλληλη δρομολόγηση.",
     ],
     duplicate: [
       "The addresses are identical. Two devices must not share the same IP on the same network.",
@@ -67,7 +67,7 @@
     ],
     limit: [
       "This is subnet arithmetic, not a connectivity test. Matching subnets do not guarantee communication: VLANs, cabling, Wi-Fi isolation and firewalls also matter. The range does not show which IPs are free or suitable for your LAN.",
-      "Το εργαλείο υπολογίζει διευθύνσεις· δεν ελέγχει αν οι συσκευές επικοινωνούν. Ακόμη κι αν βρίσκονται στο ίδιο υποδίκτυο, μπορεί να υπάρχει πρόβλημα με την καλωδίωση ή περιορισμός από VLAN, απομόνωση Wi-Fi ή firewall. Οι διευθύνσεις που εμφανίζονται δεν είναι απαραίτητα ελεύθερες ή κατάλληλες για χρήση στο δίκτυό σου.",
+      "Το εργαλείο υπολογίζει διευθύνσεις· δεν ελέγχει αν οι συσκευές επικοινωνούν. Ακόμη κι αν βρίσκονται στο ίδιο υποδίκτυο, μπορεί να υπάρχει πρόβλημα στην καλωδίωση, ρύθμιση VLAN, απομόνωση Wi-Fi ή τείχος προστασίας (firewall). Οι διευθύνσεις που εμφανίζονται δεν είναι απαραίτητα ελεύθερες ή κατάλληλες για χρήση στο δίκτυό σου.",
     ],
     copy: ["Copy summary", "Αντιγραφή σύνοψης"],
     copied: ["Summary copied.", "Η σύνοψη αντιγράφηκε."],

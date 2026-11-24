@@ -18,10 +18,10 @@
     "Calculate IPv4 subnet details and compare printer and computer addresses in English or Greek.":
       "Υπολόγισε τα στοιχεία ενός υποδικτύου IPv4 και σύγκρινε τις διευθύνσεις ενός υπολογιστή και ενός εκτυπωτή.",
     "Calculate IPv4 subnet details and check whether a computer and a printer are on the same subnet. Runs entirely in your browser.":
-      "Υπολόγισε τα στοιχεία ενός υποδικτύου IPv4 και έλεγξε αν ένας υπολογιστής και ένας εκτυπωτής βρίσκονται στο ίδιο υποδίκτυο. Λειτουργεί εξ ολοκλήρου στον browser σου.",
+      "Υπολόγισε τα στοιχεία ενός υποδικτύου IPv4 και έλεγξε αν ένας υπολογιστής και ένας εκτυπωτής βρίσκονται στο ίδιο υποδίκτυο. Λειτουργεί εξ ολοκλήρου στον περιηγητή σου.",
     "Printer test sheet · Tsakioan": "Δοκιμαστική εκτύπωση · Tsakioan",
     "A low-coverage printer test sheet in English and Greek: print it in your browser or download the PDF.":
-      "Δοκιμαστική σελίδα εκτύπωσης χαμηλής κάλυψης, στα Ελληνικά και στα Αγγλικά: εκτύπωσέ τη από τον browser ή κατέβασε το PDF.",
+      "Δοκιμαστική σελίδα εκτύπωσης χαμηλής κάλυψης, στα Ελληνικά και στα Αγγλικά: εκτύπωσέ τη από τον περιηγητή σου ή κατέβασε το PDF.",
     // Page text
     "Tap a component to explore my work. Flip the power switch to bring the board to life.":
       "Πάτησε σε ένα από τα εξαρτήματα για να μάθεις περισσότερα για τη δουλειά μου. Με τον διακόπτη μπορείς να ανάψεις ή να σβήσεις την πλακέτα.",
@@ -31,11 +31,11 @@
     "IT Specialist": "Τεχνικός Πληροφορικής",
     "Larissa, Greece · April–July 2025": "Λάρισα, Ελλάδα · Απρίλιος–Ιούλιος 2025",
     "Provided onsite and remote support for computers, printers and networks, including troubleshooting, maintenance and software setup.":
-      "Υποστήριζα υπολογιστές, εκτυπωτές και δίκτυα, στον χώρο του πελάτη και απομακρυσμένα. Αντιμετώπιζα βλάβες και αναλάμβανα συντηρήσεις και εγκαταστάσεις λογισμικού.",
+      "Υποστήριζα υπολογιστές, εκτυπωτές και δίκτυα, στον χώρο του πελάτη και από απόσταση. Αντιμετώπιζα βλάβες και αναλάμβανα συντηρήσεις και εγκαταστάσεις λογισμικού.",
     "Installed and terminated UTP and RJ-45 network cabling and configured small-office systems.":
       "Εγκαθιστούσα καλωδίωση UTP, έκανα τερματισμούς RJ-45 και ρύθμιζα συστήματα σε μικρά γραφεία.",
     "Assisted with equipment preparation and installation for public-sector projects, including Syzefxis II.":
-      "Συμμετείχα στην προετοιμασία και εγκατάσταση εξοπλισμού για έργα του Δημοσίου, όπως το ΣΥΖΕΥΞΙΣ II.",
+      "Συμμετείχα στην προετοιμασία και την εγκατάσταση εξοπλισμού για έργα του Δημοσίου, όπως το ΣΥΖΕΥΞΙΣ II.",
     "IT support": "Τεχνική υποστήριξη",
     "Syzefxis II": "ΣΥΖΕΥΞΙΣ II",
     INTERNSHIP: "ΠΡΑΚΤΙΚΗ ΑΣΚΗΣΗ",
@@ -45,7 +45,7 @@
     "Supported daily IT operations across departments and helped employees resolve computer and software issues.":
       "Στην πρακτική μου, βοηθούσα τους υπαλλήλους διαφόρων τμημάτων να λύσουν καθημερινά προβλήματα με τους υπολογιστές και τα προγράμματά τους.",
     "Created reports and proposed improvements to local network and hardware infrastructure.":
-      "Συνέτασσα αναφορές και πρότεινα βελτιώσεις στο τοπικό δίκτυο και στον εξοπλισμό.",
+      "Συνέταξα αναφορές και πρότεινα βελτιώσεις στο τοπικό δίκτυο και στον εξοπλισμό.",
     "User support": "Υποστήριξη χρηστών",
     "Hardware & networks": "Εξοπλισμός & δίκτυα",
     "Install, maintain and repair Xerox and Lexmark printers and multifunction devices onsite, in the workshop and remotely.":
@@ -53,7 +53,7 @@
     "Diagnose faults, repair or replace components, then reassemble, configure and test equipment.":
       "Εντοπίζω βλάβες, επισκευάζω ή αντικαθιστώ εξαρτήματα και ελέγχω ότι ο εξοπλισμός λειτουργεί σωστά μετά την επισκευή.",
     "Install drivers, operating systems and applications, and follow up on repairs to check reliability.":
-      "Εγκαθιστώ drivers, λειτουργικά συστήματα και εφαρμογές και παρακολουθώ τη λειτουργία του εξοπλισμού μετά την επισκευή.",
+      "Εγκαθιστώ προγράμματα οδήγησης, λειτουργικά συστήματα και εφαρμογές, και παρακολουθώ τη λειτουργία του εξοπλισμού μετά την επισκευή.",
     "I’m Ioannis Tsakalidis, a computer and network technician based in Larissa. My experience spans IT support, networking, and servicing Xerox and Lexmark printing equipment. Alongside my work, I’m studying Artificial Intelligence.":
       "Είμαι ο Ιωάννης Τσακαλίδης, τεχνικός υπολογιστών και δικτύων στη Λάρισα. Εργάζομαι στην COPYPRINT, όπου ασχολούμαι με την υποστήριξη, τη συντήρηση και την επισκευή εκτυπωτών Xerox και Lexmark. Παράλληλα σπουδάζω Τεχνητή Νοημοσύνη.",
     "From diagnosis": "Από τη διάγνωση",
@@ -63,7 +63,7 @@
     Representative: "Τεχνικών Υπηρεσιών",
     "Larissa, Greece · July 2025–Present": "Λάρισα, Ελλάδα · Ιούλιος 2025–Σήμερα",
     "Completed official service training from Xerox and Lexmark, covering multiple printer and multifunction models.":
-      "Έχω ολοκληρώσει επίσημη εκπαίδευση service από τη Xerox και τη Lexmark, για πολλά μοντέλα εκτυπωτών και πολυμηχανημάτων.",
+      "Έχω ολοκληρώσει επίσημη τεχνική εκπαίδευση από τη Xerox και τη Lexmark, που καλύπτει πολλά μοντέλα εκτυπωτών και πολυμηχανημάτων.",
     "Diagnostics & repair": "Διάγνωση & επισκευή",
     "Onsite & remote support": "Επιτόπια & απομακρυσμένη υποστήριξη",
     "Skip to content": "Μετάβαση στο περιεχόμενο",
@@ -74,7 +74,7 @@
     "LARISSA, GREECE": "ΛΑΡΙΣΑ, ΕΛΛΑΔΑ",
     "Hands-on IT.": "Πληροφορική στην πράξη.",
     "A mind for": "Με το βλέμμα",
-    "what’s next.": "στο αύριο.",
+    "what’s next.": "στο μέλλον.",
     "Computer & network technician.": "Τεχνικός υπολογιστών και δικτύων.",
     "Artificial Intelligence student.": "Φοιτητής Τεχνητής Νοημοσύνης.",
     "I like understanding how things work—and making them work better.":
@@ -88,16 +88,16 @@
     Networks: "Δίκτυα",
     Hardware: "Εξοπλισμός",
     "AI & learning": "Σπουδές & AI",
-    "Built on curiosity.": "Δες με τι ασχολούμαι.",
+    "Built on curiosity.": "Βασίζεται στην περιέργεια.",
     "Tap a component to explore my work. Try the power switch to see the board come to life.":
       "Πάτησε σε ένα από τα εξαρτήματα για να μάθεις περισσότερα για τη δουλειά μου. Με τον διακόπτη μπορείς να ανάψεις ή να σβήσεις την πλακέτα.",
-    "Networks that connect.": "Εγκατάσταση και υποστήριξη δικτύων.",
+    "Networks that connect.": "Δίκτυα που συνδέουν.",
     "Structured cabling, system setup, troubleshooting, and fault restoration—including work on Syzefxis II.":
       "Δομημένη καλωδίωση, εγκατάσταση συστημάτων, διάγνωση και αποκατάσταση βλαβών, με συμμετοχή και στο έργο ΣΥΖΕΥΞΙΣ II.",
-    "Hands-on with hardware.": "Υπολογιστές και εκτυπωτές.",
+    "Hands-on with hardware.": "Στην πράξη, με τον εξοπλισμό.",
     "Computer support, hardware maintenance, and printer repair, backed by official Xerox and Lexmark service training.":
       "Ασχολούμαι με την υποστήριξη υπολογιστών, τη συντήρηση εξοπλισμού και την επισκευή εκτυπωτών, με επίσημη εκπαίδευση service από τη Xerox και τη Lexmark.",
-    "Still learning. Always curious.": "Συνεχίζω να μαθαίνω.",
+    "Still learning. Always curious.": "Συνεχίζω να μαθαίνω. Πάντα με περιέργεια.",
     "I’m studying Artificial Intelligence at Aegean College and exploring how programming and automation can support everyday IT work.":
       "Σπουδάζω Τεχνητή Νοημοσύνη στο Aegean College. Με ενδιαφέρει πώς ο προγραμματισμός και οι αυτοματισμοί μπορούν να με βοηθήσουν στην καθημερινή δουλειά μου.",
     "Power is off.": "Η πλακέτα είναι σβηστή.",
@@ -136,9 +136,9 @@
     "Printer repair": "Επισκευή εκτυπωτών",
     "Client communication": "Επικοινωνία με πελάτες",
     "THE NEXT CHAPTER": "ΣΠΟΥΔΕΣ",
-    "From maintaining systems": "Μαθαίνω περισσότερα",
-    "to making them": "για την Τεχνητή",
-    "smarter.": "Νοημοσύνη.",
+    "From maintaining systems": "Από τη συντήρηση συστημάτων",
+    "to making them": "στο να τα κάνω",
+    "smarter.": "πιο έξυπνα.",
     "I’m studying Artificial Intelligence at Aegean College, with a growing interest in how programming and automation can make everyday IT work more efficient.":
       "Σπουδάζω Τεχνητή Νοημοσύνη στο Aegean College. Με ενδιαφέρει ιδιαίτερα πώς ο προγραμματισμός και οι αυτοματισμοί μπορούν να διευκολύνουν την καθημερινή τεχνική υποστήριξη.",
     "BSc (Hons) Computing (AI)": "BSc (Hons) Computing (Τεχνητή Νοημοσύνη)",
@@ -146,7 +146,7 @@
       "University of Essex · Aegean College · Σε εξέλιξη",
     "Project: Diabetes Risk Explorer": "Έργο: Diabetes Risk Explorer",
     "A machine-learning study of 100,000 health records. Explore the data, compare two models and try a live risk estimate in your browser.":
-      "Μελέτη μηχανικής μάθησης σε 100.000 εγγραφές υγείας. Εξερεύνησε τα δεδομένα, σύγκρινε δύο μοντέλα και δοκίμασε μια ζωντανή εκτίμηση κινδύνου στον browser σου (η σελίδα είναι στα αγγλικά).",
+      "Μελέτη μηχανικής μάθησης σε 100.000 εγγραφές υγείας. Εξερεύνησε τα δεδομένα, σύγκρινε δύο μοντέλα και δοκίμασε μια ζωντανή εκτίμηση κινδύνου στον περιηγητή σου.",
     "Open the project": "Άνοιξε το έργο",
     "Download CV (PDF)": "Κατέβασε το βιογραφικό (PDF)",
     "KEEP THE CONVERSATION GOING": "ΑΣ ΜΙΛΗΣΟΥΜΕ",
