@@ -115,6 +115,42 @@ function build(file, translateBody) {
     if (!html.includes('src="translations.js')) fail(`${file}: could not add translations.js`);
   }
 
+  // 4b. The homepage's structured data describes the Greek page in Greek.
+  if (file === "index.html") {
+    const greekPerson = {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Ιωάννης Τσακαλίδης",
+      alternateName: "Ioannis Tsakalidis",
+      url: site + "el/",
+      inLanguage: "el",
+      jobTitle: "Εκπρόσωπος Τεχνικών Υπηρεσιών",
+      worksFor: { "@type": "Organization", name: "COPYPRINT E.E." },
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Λάρισα",
+        addressRegion: "Θεσσαλία",
+        addressCountry: "GR",
+      },
+      knowsAbout: [
+        "Τεχνική υποστήριξη",
+        "δίκτυα υπολογιστών",
+        "επισκευή εκτυπωτών",
+        "Xerox",
+        "Lexmark",
+        "τεχνητή νοημοσύνη",
+      ],
+      sameAs: ["https://www.linkedin.com/in/tsak/"],
+    };
+    const block = /<script type="application\/ld\+json">[\s\S]*?<\/script>/;
+    if (!block.test(html)) fail(`${file}: structured data block not found`);
+    html = html.replace(
+      block,
+      () =>
+        `<script type="application/ld+json">\n${JSON.stringify(greekPerson, null, 2)}\n</script>`,
+    );
+  }
+
   // 5. Relative links to pages without a Greek version, and assets, point one folder up.
   html = html.replace(/\s(href|src)="([^"]*)"/g, (whole, attr, url) => {
     if (/^(#|\/|[a-z]+:|\.\.\/)/i.test(url)) return whole;
