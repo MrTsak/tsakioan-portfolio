@@ -51,4 +51,8 @@
   <url>
     <loc>https://tsakioan.com/projects/diabetes/</loc>
   </url>
+  <url>
+    <loc>https://tsakioan.com/projects/diabetes/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tsakioan.com/projects/diabetes/"/>
+  </url>
 </urlset>
