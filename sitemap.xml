@@ -52,10 +52,12 @@
     <loc>https://tsakioan.com/projects/diabetes/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://tsakioan.com/projects/diabetes/"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://tsakioan.com/projects/diabetes/el/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tsakioan.com/projects/diabetes/"/>
   </url>
   <url>
     <loc>https://tsakioan.com/projects/diabetes/el/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://tsakioan.com/projects/diabetes/"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://tsakioan.com/projects/diabetes/el/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tsakioan.com/projects/diabetes/"/>
   </url>
 </urlset>
