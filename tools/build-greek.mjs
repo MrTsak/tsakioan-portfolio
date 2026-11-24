@@ -157,10 +157,11 @@ function build(file, translateBody) {
     return ` ${attr}="../${url}"`;
   });
 
-  // 6a. The homepage CV link points to the Greek CV on the Greek page.
+  // 6a. The homepage CV link points to the Greek CV on the Greek page, saved under a Greek name.
   if (file === "index.html") {
-    if (!html.includes('href="../cv-en.pdf"')) fail(`${file}: CV link not found`);
-    html = html.replace('href="../cv-en.pdf"', 'href="../cv-el.pdf"');
+    const english = 'href="../cv-en.pdf" download="Ioannis-Tsakalidis-CV-English.pdf"';
+    if (!html.includes(english)) fail(`${file}: CV link not found`);
+    html = html.replace(english, 'href="../cv-el.pdf" download="Ioannis-Tsakalidis-CV-Greek.pdf"');
   }
 
   // 6b. The homepage's project link opens the Greek project page.
