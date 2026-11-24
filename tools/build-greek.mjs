@@ -123,7 +123,6 @@ function build(file, translateBody) {
       name: "Ιωάννης Τσακαλίδης",
       alternateName: "Ioannis Tsakalidis",
       url: site + "el/",
-      inLanguage: "el",
       jobTitle: "Εκπρόσωπος Τεχνικών Υπηρεσιών",
       worksFor: { "@type": "Organization", name: "COPYPRINT E.E." },
       address: {
