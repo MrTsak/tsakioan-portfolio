@@ -383,6 +383,28 @@ h3 {
   font-size: 0.875rem;
   color: #a9bdd7;
 }
+.learning-project {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin-top: 44px;
+  padding-top: 32px;
+  border-top: 1px solid #345478;
+}
+.learning-project p {
+  max-width: 590px;
+  color: #b5c5db;
+  margin: 0;
+}
+.learning-project .learning-project-title {
+  color: var(--ink);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.learning-project .button {
+  flex-shrink: 0;
+}
 .contact {
   padding-top: 110px;
 }
@@ -497,6 +519,11 @@ footer .wordmark {
 @media (max-width: 720px) {
   .wrap {
     width: calc(100% - 40px);
+  }
+  .learning-project {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
   }
   .site-header {
     min-height: 85px;
