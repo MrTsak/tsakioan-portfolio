@@ -163,6 +163,12 @@ function build(file, translateBody) {
     html = html.replace('href="../cv-en.pdf"', 'href="../cv-el.pdf"');
   }
 
+  // 6b. The homepage's project link opens the Greek project page.
+  if (file === "index.html") {
+    if (!html.includes('href="../projects/diabetes/"')) fail(`${file}: project link not found`);
+    html = html.replace('href="../projects/diabetes/"', 'href="../projects/diabetes/el/"');
+  }
+
   // 6. The language switch points back to the English page.
   const toggle = /<a\s[^>]*?\b(class="language-toggle"|id="language")[^>]*>[\s\S]*?<\/a\s*>/;
   if (!toggle.test(html)) fail(`${file}: no language switch found`);
