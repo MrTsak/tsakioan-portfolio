@@ -80,7 +80,7 @@
       "Enter a prefix from 0 to 32 or a contiguous subnet mask, such as 255.255.255.0.",
       "Γράψε πρόθεμα από 0 έως 32 ή συνεχόμενη μάσκα υποδικτύου, π.χ. 255.255.255.0.",
     ],
-    test: ["Printer test sheet", "Σελίδα δοκιμαστικής εκτύπωσης"],
+    test: ["Printer test sheet", "Δοκιμαστική σελίδα εκτύπωσης"],
   };
   if (typeof module !== "undefined" && module.exports) module.exports = strings;
   else root.networkStrings = strings;
