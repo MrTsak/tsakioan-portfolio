@@ -104,8 +104,9 @@
     calculate();
   };
   // Switching language keeps what was entered. The values are handed to the other language's page
-  // through this tab's sessionStorage, which that page reads and deletes at once. They never go
-  // into the link, are not sent anywhere, and an unused hand-over expires after a minute.
+  // through this tab's sessionStorage, which any calculator page reads and deletes when it loads.
+  // They never go into the link and are not sent anywhere; an entry older than a minute is not used.
+  // If sessionStorage is blocked, the switch still happens, just without the values.
   const HANDOFF = "tsakioan-calculator-handoff";
   const HANDOFF_MAX_AGE = 60 * 1000;
   // The language button is a link to the other page; remember the choice for later visits.

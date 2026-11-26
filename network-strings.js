@@ -11,8 +11,8 @@
       "Συμπλήρωσε μια διεύθυνση IPv4 και τη μάσκα υποδικτύου για να υπολογίσεις τη διεύθυνση δικτύου και το εύρος διευθύνσεων για τις συσκευές. Αν θέλεις, πρόσθεσε μια δεύτερη διεύθυνση για να δεις αν ανήκει στο ίδιο υποδίκτυο.",
     ],
     privacy: [
-      "Calculations happen in this browser. Addresses are not uploaded. When you switch language, they are kept in this tab only until the other page opens. This tool does not scan or change your network.",
-      "Οι υπολογισμοί γίνονται τοπικά στον browser σου. Οι διευθύνσεις δεν αποστέλλονται σε διακομιστή. Όταν αλλάζεις γλώσσα, κρατούνται μόνο σε αυτή την καρτέλα, μέχρι να ανοίξει η άλλη σελίδα. Το εργαλείο δεν πραγματοποιεί σάρωση και δεν αλλάζει τις ρυθμίσεις του δικτύου σου.",
+      "Calculations happen in this browser. Addresses are not uploaded. When you switch languages, they are temporarily stored in this tab, then removed when the destination page loads. This tool does not scan or change your network.",
+      "Οι υπολογισμοί γίνονται τοπικά στον browser σου. Οι διευθύνσεις δεν αποστέλλονται σε διακομιστή. Όταν αλλάζεις γλώσσα, αποθηκεύονται προσωρινά σε αυτή την καρτέλα και διαγράφονται μόλις φορτώσει η σελίδα προορισμού. Το εργαλείο δεν πραγματοποιεί σάρωση και δεν αλλάζει τις ρυθμίσεις του δικτύου σου.",
     ],
     settings: ["Network settings", "Στοιχεία για τον υπολογισμό"],
     address: ["Computer / device IPv4 address", "Διεύθυνση IPv4 της συσκευής"],

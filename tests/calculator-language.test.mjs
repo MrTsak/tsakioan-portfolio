@@ -139,3 +139,47 @@ test('calculator ignores a stale or misdirected hand-over', { skip: !chromium &&
     server.close();
   }
 });
+
+test('calculator and language switch still work when sessionStorage is unavailable', { skip: !chromium && 'playwright not installed', timeout: 60000 }, async () => {
+  const server = await serve([]);
+  const browser = await chromium.launch();
+  try {
+    const base = `http://localhost:${server.address().port}`;
+    const variants = {
+      // Blocked site data: touching sessionStorage at all throws.
+      blocked: () => Object.defineProperty(window, 'sessionStorage', { get() { throw new DOMException('blocked', 'SecurityError'); } }),
+      // Full or read-only storage: reading works, writing throws.
+      'write fails': () => { Storage.prototype.setItem = function () { throw new DOMException('full', 'QuotaExceededError'); }; },
+    };
+    for (const [name, block] of Object.entries(variants)) {
+      const context = await browser.newContext();
+      await context.addInitScript(block);
+      const page = await context.newPage();
+      const errors = [];
+      page.on('pageerror', (e) => errors.push(e.message));
+      await page.goto(`${base}/network.html`);
+      await page.fill('#address', '192.168.1.20');
+      await page.fill('#mask', '24');
+      await page.fill('#other', '192.168.1.50');
+      await page.click('button.primary');
+      assert.equal(await page.isVisible('#results'), true, `${name}: the calculator still calculates`);
+
+      await Promise.all([page.waitForNavigation(), page.click('#language')]);
+      assert.match(page.url(), /\/el\/network\.html$/, `${name}: the switch still reaches the Greek page`);
+      assert.equal(await page.getAttribute('html', 'lang'), 'el');
+      assert.equal(await page.inputValue('#address'), '', `${name}: nothing carried over`);
+      assert.equal(await page.isVisible('#results'), false);
+      await page.fill('#address', '10.0.0.1');
+      await page.click('button.primary');
+      assert.equal(await page.isVisible('#results'), true, `${name}: the Greek calculator still calculates`);
+
+      await Promise.all([page.waitForNavigation(), page.click('#language')]);
+      assert.match(page.url(), /\/network\.html$/, `${name}: and back to English`);
+      assert.deepEqual(errors, [], `${name}: no page errors`);
+      await context.close();
+    }
+  } finally {
+    await browser.close();
+    server.close();
+  }
+});
