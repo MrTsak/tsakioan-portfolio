@@ -61,7 +61,8 @@
     $("summary").value = summary;
     $("results").hidden = false;
   }
-  function calculate() {
+  // quiet: used when restoring after a language switch, so the page neither scrolls nor moves focus.
+  function calculate({ quiet = false } = {}) {
     errorKey = "";
     result = null;
     $("results").hidden = true;
@@ -75,7 +76,7 @@
         $(id).setAttribute("aria-invalid", "true");
         errorKey = id === "mask" ? "maskError" : "ipError";
         $("error").textContent = t(errorKey);
-        $(id).focus();
+        if (!quiet) $(id).focus();
         return;
       }
     }
@@ -83,7 +84,7 @@
     $("summary").hidden = true;
     $("status").textContent = "";
     show();
-    $("results").scrollIntoView({ block: "start", behavior: "smooth" });
+    if (!quiet) $("results").scrollIntoView({ block: "start", behavior: "smooth" });
   }
   $("calculator").addEventListener("submit", (e) => {
     e.preventDefault();
@@ -102,12 +103,46 @@
     $("other").value = "192.168.1.50";
     calculate();
   };
+  // Switching language keeps what was entered. The values are handed to the other language's page
+  // through this tab's sessionStorage, which any calculator page reads and deletes when it loads.
+  // They never go into the link and are not sent anywhere; an entry older than a minute is not used.
+  // If sessionStorage is blocked, the switch still happens, just without the values.
+  const HANDOFF = "tsakioan-calculator-handoff";
+  const HANDOFF_MAX_AGE = 60 * 1000;
   // The language button is a link to the other page; remember the choice for later visits.
   $("language").addEventListener("click", () => {
+    const target = lang === "en" ? "el" : "en";
     try {
-      localStorage.setItem("tsakioan-language", lang === "en" ? "el" : "en");
+      localStorage.setItem("tsakioan-language", target);
+    } catch {}
+    try {
+      sessionStorage.setItem(
+        HANDOFF,
+        JSON.stringify({
+          to: target,
+          at: Date.now(),
+          address: $("address").value,
+          mask: $("mask").value,
+          other: $("other").value,
+          // Which view was on screen: a result, a validation message, or just the fields.
+          shown: result ? "result" : errorKey ? "error" : "fields",
+        }),
+      );
     } catch {}
   });
+  function restoreHandoff() {
+    let saved = null;
+    try {
+      saved = JSON.parse(sessionStorage.getItem(HANDOFF));
+      sessionStorage.removeItem(HANDOFF);
+    } catch {}
+    if (!saved || saved.to !== lang || !(Date.now() - saved.at < HANDOFF_MAX_AGE)) return;
+    for (const id of ["address", "mask", "other"]) {
+      if (typeof saved[id] === "string") $(id).value = saved[id].slice(0, 32);
+    }
+    // Recalculating from the same values redraws the same result or message in this language.
+    if (saved.shown === "result" || saved.shown === "error") calculate({ quiet: true });
+  }
   $("copy").onclick = async () => {
     try {
       await navigator.clipboard.writeText(summary);
@@ -120,4 +155,5 @@
     }
   };
   render();
+  restoreHandoff();
 })();
