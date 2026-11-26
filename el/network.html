@@ -4,17 +4,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Υπολογισμός IP και υποδικτύου · Tsakioan</title>
+    <title>Υπολογιστής IP και υποδικτύου · Tsakioan</title>
     <link rel="canonical" href="https://tsakioan.com/el/network.html" />
     <link rel="alternate" hreflang="en" href="https://tsakioan.com/network.html" />
     <link rel="alternate" hreflang="el" href="https://tsakioan.com/el/network.html" />
     <link rel="alternate" hreflang="x-default" href="https://tsakioan.com/network.html" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Tsakioan" />
-    <meta property="og:title" content="Υπολογισμός IP και υποδικτύου · Tsakioan" />
+    <meta property="og:title" content="Υπολογιστής IP και υποδικτύου · Tsakioan" />
     <meta
       property="og:description"
-      content="Υπολόγισε τα στοιχεία ενός υποδικτύου IPv4 και έλεγξε αν ένας υπολογιστής και ένας εκτυπωτής βρίσκονται στο ίδιο υποδίκτυο. Λειτουργεί εξ ολοκλήρου στον περιηγητή σου."
+      content="Υπολόγισε τα στοιχεία ενός υποδικτύου IPv4 και έλεγξε αν ένας υπολογιστής και ένας εκτυπωτής βρίσκονται στο ίδιο υποδίκτυο. Λειτουργεί εξ ολοκλήρου στον browser σου."
     />
     <meta property="og:url" content="https://tsakioan.com/el/network.html" />
     <meta property="og:image" content="https://tsakioan.com/og-image-el.png" />
@@ -22,14 +22,14 @@
     <meta property="og:image:height" content="630" />
     <meta
       property="og:image:alt"
-      content="tsakioan — Πληροφορική στην πράξη. Από τη διάγνωση στην επισκευή. Ιωάννης Τσακαλίδης, Λάρισα."
+      content="tsakioan — Τεχνική υποστήριξη, δίκτυα και επισκευές. Ιωάννης Τσακαλίδης, Λάρισα."
     />
     <meta property="og:locale" content="el_GR" />
     <meta property="og:locale:alternate" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="description"
-      content="Υπολόγισε τα στοιχεία ενός υποδικτύου IPv4 και σύγκρινε τις διευθύνσεις ενός υπολογιστή και ενός εκτυπωτή, στα Ελληνικά ή στα Αγγλικά."
+      content="Υπολόγισε τα στοιχεία ενός υποδικτύου IPv4 και σύγκρινε τις διευθύνσεις ενός υπολογιστή και ενός εκτυπωτή, στα ελληνικά ή στα αγγλικά."
     />
     <link rel="icon" href="../favicon.svg?v=20261124a" type="image/svg+xml" />
     <style>
@@ -224,23 +224,23 @@
   <body>
     <main>
       <header>
-        <a href="./" data-t="back">Επιστροφή στο portfolio</a
+        <a href="./" data-t="back">Επιστροφή στην αρχική</a
         ><a id="language" href="../network.html" hreflang="en" lang="en" aria-label="Switch to English">English</a>
       </header>
-      <div class="eyebrow">TSAKIOAN / IT TOOLKIT</div>
-      <h1 data-t="title">Κατανόησε το δίκτυό σου.</h1>
+      <div class="eyebrow" data-t="toolkit">TSAKIOAN / ΕΡΓΑΛΕΙΑ ΠΛΗΡΟΦΟΡΙΚΗΣ</div>
+      <h1 data-t="title">Υπολογιστής IP και υποδικτύου</h1>
       <p class="intro" data-t="intro">
-        Συμπλήρωσε μια διεύθυνση IPv4 και τη μάσκα υποδικτύου για να δεις το εύρος των διευθύνσεων. Μπορείς επίσης να ελέγξεις αν ένας υπολογιστής και ένας εκτυπωτής ανήκουν στο ίδιο υποδίκτυο.
+        Συμπλήρωσε μια διεύθυνση IPv4 και τη μάσκα υποδικτύου για να υπολογίσεις τη διεύθυνση δικτύου και το εύρος διευθύνσεων για τις συσκευές. Αν θέλεις, πρόσθεσε μια δεύτερη διεύθυνση για να δεις αν ανήκει στο ίδιο υποδίκτυο.
       </p>
       <p class="notice" data-t="privacy">
-        Οι υπολογισμοί γίνονται στον περιηγητή σου. Οι διευθύνσεις δεν αποστέλλονται ούτε αποθηκεύονται. Το εργαλείο δεν σαρώνει ούτε αλλάζει το δίκτυό σου.
+        Οι υπολογισμοί γίνονται τοπικά στον browser σου. Οι διευθύνσεις δεν αποστέλλονται σε διακομιστή και δεν αποθηκεύονται. Το εργαλείο δεν πραγματοποιεί σάρωση και δεν αλλάζει τις ρυθμίσεις του δικτύου σου.
       </p>
       <form id="calculator" novalidate>
         <section class="panel">
-          <h2 data-t="settings">Ρυθμίσεις δικτύου</h2>
+          <h2 data-t="settings">Στοιχεία για τον υπολογισμό</h2>
           <div class="grid">
             <div>
-              <label for="address" data-t="address">Διεύθυνση IPv4 υπολογιστή / συσκευής</label
+              <label for="address" data-t="address">Διεύθυνση IPv4 της συσκευής</label
               ><input
                 id="address"
                 inputmode="decimal"
@@ -251,7 +251,7 @@
                 aria-describedby="ip-hint"
               />
               <p id="ip-hint" class="hint" data-t="ipHint">
-                Γράψε τέσσερις αριθμούς από 0 έως 255, χωρισμένους με τελείες. Μόνο IPv4.
+                Συμπλήρωσε τέσσερις αριθμούς από 0 έως 255, χωρισμένους με τελείες, π.χ. 192.168.1.20.
               </p>
             </div>
             <div>
@@ -265,11 +265,11 @@
                 aria-describedby="mask-hint"
               />
               <p id="mask-hint" class="hint" data-t="maskHint">
-                Παράδειγμα: 255.255.255.0, 24 ή /24. Υποστηρίζονται προθέματα /0–/32.
+                Δέχεται μάσκα όπως 255.255.255.0 ή πρόθεμα όπως 24 ή /24. Υποστηρίζονται προθέματα από /0 έως /32.
               </p>
             </div>
           </div>
-          <label for="other" data-t="other">IPv4 εκτυπωτή / δεύτερης συσκευής (προαιρετικό)</label
+          <label for="other" data-t="other">Διεύθυνση IPv4 δεύτερης συσκευής (προαιρετικό)</label
           ><input
             id="other"
             inputmode="decimal"
@@ -280,11 +280,11 @@
             aria-describedby="other-hint"
           />
           <p id="other-hint" class="hint" data-t="otherHint">
-            Για τη σύγκριση χρησιμοποιείται η ίδια μάσκα και για τις δύο συσκευές. Έλεγξε πρώτα ότι έχουν όντως την ίδια μάσκα στις ρυθμίσεις τους.
+            Η σύγκριση θεωρεί ότι και οι δύο συσκευές χρησιμοποιούν τη μάσκα που συμπλήρωσες. Έλεγξε ότι αυτό ισχύει στις ρυθμίσεις τους.
           </p>
           <div class="actions">
             <button class="primary" type="submit" data-t="calculate">Υπολογισμός</button
-            ><button id="example" type="button" data-t="example">Δες ένα παράδειγμα</button>
+            ><button id="example" type="button" data-t="example">Συμπλήρωσε ένα παράδειγμα</button>
           </div>
           <p id="error" class="error" role="alert"></p>
         </section>
@@ -295,10 +295,10 @@
         <p id="special" class="notice" hidden></p>
         <p id="comparison" class="notice" hidden></p>
         <p class="hint" data-t="limit">
-          Το εργαλείο υπολογίζει διευθύνσεις· δεν ελέγχει αν οι συσκευές επικοινωνούν. Ακόμη κι αν βρίσκονται στο ίδιο υποδίκτυο, μπορεί να υπάρχει πρόβλημα στην καλωδίωση, ρύθμιση VLAN, απομόνωση Wi-Fi ή τείχος προστασίας (firewall). Οι διευθύνσεις που εμφανίζονται δεν είναι απαραίτητα ελεύθερες ή κατάλληλες για χρήση στο δίκτυό σου.
+          Το εργαλείο κάνει υπολογισμούς διευθύνσεων, όχι έλεγχο συνδεσιμότητας. Ακόμη και στο ίδιο υποδίκτυο, η επικοινωνία μπορεί να εμποδίζεται από προβλήματα καλωδίωσης, ρυθμίσεις VLAN, απομόνωση συσκευών Wi-Fi ή κανόνες firewall. Τα αποτελέσματα δεν δείχνουν ποιες διευθύνσεις είναι ελεύθερες ή κατάλληλες για το δίκτυό σου.
         </p>
         <div class="actions">
-          <button id="copy" type="button" data-t="copy">Αντιγραφή σύνοψης</button>
+          <button id="copy" type="button" data-t="copy">Αντιγραφή αποτελεσμάτων</button>
         </div>
         <textarea id="summary" readonly hidden aria-label="Summary / Σύνοψη" rows="9"></textarea>
         <p id="status" class="status" role="status"></p>
