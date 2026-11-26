@@ -50,7 +50,8 @@
   --muted: #a8b6ca;
   --accent: #85baff;
   --line: #31425b;
-  --font: "DM Sans", sans-serif;
+  /* DM Sans has no Greek letters; Greek text falls through to Manrope, which has them. */
+  --font: "DM Sans", "Manrope", sans-serif;
   --display: "Manrope", sans-serif;
   color-scheme: dark;
 }
