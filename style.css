@@ -1494,7 +1494,7 @@ html[lang="el"] .pcb-detail {
   }
 }
 
-.demo-print-link {
+.pcb-link {
   display: block;
   margin-top: 16px;
   padding-top: 14px;
@@ -1505,6 +1505,6 @@ html[lang="el"] .pcb-detail {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
-.demo-print-link[hidden] {
+.pcb-link[hidden] {
   display: none;
 }
