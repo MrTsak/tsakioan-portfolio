@@ -20,7 +20,7 @@
     const r = result;
     const rows = [
       [t("address"), r.address],
-      [t("mask"), r.mask],
+      [t("maskResult"), r.mask],
       [t("prefix"), "/" + r.prefix],
       [t("network"), r.network],
       [t("broadcast"), r.broadcast || t("none")],

@@ -185,6 +185,11 @@ function build(file, translateBody) {
     .map((part, i) => (i % 2 === 1 ? part : translateBody(part, file)))
     .join("");
 
+  // 8. Elements emptied by a deliberately empty translation are removed.
+  if (file === "index.html") {
+    html = html.replace(/\s*<p class="eyebrow"><\/p>/g, "").replace(/\s*<em><\/em>/g, "");
+  }
+
   const outFile = join(root, "el", file);
   if (checkOnly) {
     const current = existsSync(outFile) ? readFileSync(outFile, "utf8") : "";
@@ -204,7 +209,8 @@ const untranslated = new Set();
 function translateHomepage(part) {
   part = part.replace(/>([^<]+)</g, (whole, text) => {
     const greekText = lookup(text);
-    if (greekText) {
+    // An empty translation is deliberate: the text is dropped from the Greek page.
+    if (greekText !== undefined) {
       const [, lead, trail] = text.match(/^(\s*)[\s\S]*?(\s*)$/);
       return `>${lead}${encodeText(greekText)}${trail}<`;
     }
