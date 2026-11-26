@@ -9,6 +9,17 @@
     ai: ['Still learning. Always curious.', 'I’m studying Artificial Intelligence at Aegean College and exploring how programming and automation can support everyday IT work.']
   };
   const demo = document.querySelector('.pcb-demo');
+  // One link per component, shown under the board only while that component is selected.
+  // Relative links: from el/ they open the Greek pages.
+  const contextLink = document.querySelector('.pcb-link');
+  const links = {
+    hardware: { href: () => 'print-test.html', text: ['Try your own printer: open the test sheet', 'Άνοιξε τη δοκιμαστική σελίδα εκτύπωσης'] },
+    network: { href: () => 'network.html', text: ['Open the IP & subnet calculator', 'Άνοιξε τον υπολογιστή IP και υποδικτύου'] },
+    ai: {
+      href: () => (document.documentElement.lang === 'el' ? '../projects/diabetes/el/' : 'projects/diabetes/'),
+      text: ['See the project: Diabetes Data Analysis', 'Δες το έργο: Ανάλυση δεδομένων διαβήτη'],
+    },
+  };
   const run = demo.querySelector('.demo-run');
   const copy = {
     label: ['INTERACTIVE DEMO', 'ΔΟΚΙΜΑΣΕ ΤΗΝ ΠΡΟΣΟΜΟΙΩΣΗ'],
@@ -36,16 +47,6 @@
     demo.hidden = !available;
     board.dataset.activity = available && step >= 0 && step < 2 ? selected : '';
     if (!available) return;
-    const printLink = demo.querySelector('.demo-print-link');
-    printLink.hidden = selected !== 'hardware';
-    printLink.textContent = document.documentElement.lang === 'el' ? 'Άνοιξε τη δοκιμαστική σελίδα εκτύπωσης →' : 'Try your own printer: open the test sheet →';
-    // Relative links: from el/ they open the Greek tool pages.
-    printLink.href = 'print-test.html';
-    let networkLink = demo.querySelector('.demo-network-link');
-    if (!networkLink) { networkLink = document.createElement('a'); networkLink.className = 'demo-print-link demo-network-link'; demo.append(networkLink); }
-    networkLink.hidden = selected !== 'network';
-    networkLink.textContent = document.documentElement.lang === 'el' ? 'Υπολογιστής IP και υποδικτύου →' : 'IP and network calculator';
-    networkLink.href = 'network.html';
     demo.dataset.kind = selected;
     demo.dataset.step = String(step);
     demo.querySelector('.demo-label').textContent = t('label');
@@ -60,10 +61,25 @@
     const advance = () => { step++; render(); if (step < 2) timer = setTimeout(advance, 1100); };
     advance();
   });
+  function renderLink(on) {
+    const link = on && links[selected];
+    contextLink.hidden = !link;
+    if (!link) {
+      contextLink.removeAttribute('href');
+      contextLink.replaceChildren();
+      return;
+    }
+    contextLink.href = link.href();
+    const arrow = document.createElement('span');
+    arrow.setAttribute('aria-hidden', 'true');
+    arrow.textContent = ' →';
+    contextLink.replaceChildren(link.text[document.documentElement.lang === 'el' ? 1 : 0], arrow);
+  }
   function render() {
     const on = power.getAttribute('aria-checked') === 'true';
     board.dataset.powered = String(on);
     renderDemo(on);
+    renderLink(on);
     power.querySelector('.power-state').textContent = window.siteLanguage.t(on ? 'on' : 'off');
     parts.forEach(part => {
       part.disabled = !on;
