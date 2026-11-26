@@ -69,6 +69,7 @@
     "Skip to content": "Μετάβαση στο περιεχόμενο",
     About: "Σχετικά με εμένα",
     Experience: "Εμπειρία",
+    Tools: "Εργαλεία",
     "Let’s connect": "Επικοινωνία",
     "IOANNIS TSAKALIDIS": "ΙΩΑΝΝΗΣ ΤΣΑΚΑΛΙΔΗΣ",
     "LARISSA, GREECE": "ΛΑΡΙΣΑ, ΕΛΛΑΔΑ",
@@ -148,6 +149,14 @@
     "An educational machine-learning project with an initial set of 100,000 records. Explore the data, compare two models and see how their estimates change with different input values.":
       "Εκπαιδευτικό έργο μηχανικής μάθησης με αρχικό σύνολο 100.000 εγγραφών. Δες τα δεδομένα, σύγκρινε δύο μοντέλα και δοκίμασε πώς αλλάζουν οι εκτιμήσεις τους με διαφορετικές τιμές εισόδου.",
     "Open the project": "Δες το έργο",
+    "FROM MY EVERYDAY WORK": "ΑΠΟ ΤΗΝ ΚΑΘΗΜΕΡΙΝΗ ΜΟΥ ΔΟΥΛΕΙΑ",
+    "Useful tools": "Χρήσιμα εργαλεία",
+    "Free to use in your browser, on any computer.": "Δωρεάν, στον browser σου, από οποιονδήποτε υπολογιστή.",
+    "Printer test sheet": "Δοκιμαστική σελίδα εκτύπωσης",
+    "Check text clarity, fine lines and grayscale.": "Έλεγξε την ευκρίνεια του κειμένου, τις λεπτές γραμμές και τις διαβαθμίσεις του γκρι.",
+    "IP & subnet calculator": "Υπολογιστής IP και υποδικτύου",
+    "Calculate network details and check whether two addresses share a subnet.":
+      "Υπολόγισε τα στοιχεία ενός δικτύου και έλεγξε αν δύο διευθύνσεις ανήκουν στο ίδιο υποδίκτυο.",
     "Download CV (PDF)": "Κατέβασε το βιογραφικό μου (PDF)",
     "KEEP THE CONVERSATION GOING": "ΑΣ ΜΙΛΗΣΟΥΜΕ",
     "Let’s talk": "Επικοινωνία",

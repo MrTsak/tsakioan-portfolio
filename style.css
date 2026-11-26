@@ -286,6 +286,90 @@ h2 {
   color: #516078;
   margin-bottom: 5px;
 }
+/* Useful tools: two compact link cards between Experience and the studies card. */
+.tools {
+  padding-bottom: 0;
+}
+.tools .section-heading {
+  margin-bottom: 36px;
+}
+.tools .section-heading > p {
+  color: var(--muted);
+}
+.tool-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.tool-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px 24px;
+  padding: 28px 30px;
+  background: #15243a;
+  border: 1px solid #314766;
+  border-radius: 12px;
+  transition: border-color 0.2s;
+}
+.tool-card h3 {
+  font-size: 1.45rem;
+  letter-spacing: -0.5px;
+}
+/* The whole card is the link's click target; the link itself keeps the accessible name. */
+.tool-card h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+}
+.tool-card p {
+  grid-column: 1;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+.tool-arrow {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  color: var(--accent);
+  font-size: 1.4rem;
+  transition: transform 0.2s;
+}
+.tool-card:hover {
+  border-color: var(--accent);
+}
+.tool-card:hover .tool-arrow {
+  transform: translateX(3px);
+}
+.tool-card h3 a:focus-visible {
+  outline: none;
+}
+.tool-card:has(a:focus-visible) {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+@media (max-width: 400px) {
+  /* The Greek labels are longer; this keeps all four on one row down to 360px. */
+  html[lang="el"] .site-header nav {
+    gap: 6px 10px;
+    font-size: 0.8125rem;
+  }
+}
+@media (max-width: 720px) {
+  .tool-list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .tool-card {
+    padding: 22px 22px;
+  }
+  .tool-card h3 {
+    font-size: 1.25rem;
+  }
+}
 .experience .eyebrow {
   color: #465b77;
 }
@@ -1118,6 +1202,15 @@ html[lang="el"] .pcb-detail {
   }
   .site-header nav a:last-child {
     display: flex;
+  }
+  /* Four section links: each stays on one line, and on very narrow screens the row wraps
+     instead of breaking a label in two. */
+  .site-header nav {
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+  .site-header nav a {
+    white-space: nowrap;
   }
   .contact-actions {
     margin-top: 24px;
